@@ -1,0 +1,221 @@
+/* Estilos para WebPage.css */
+
+/* Estilos generales */
+.web-page {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header */
+  .header {
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .centered {
+    justify-content: center;
+  }
+  
+  .left-aligned {
+    justify-content: flex-start;
+  }
+  
+  /* Línea separadora */
+  .separator {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;
+  }
+  
+  /* Contenedor principal */
+  .main-container {
+    padding: 2rem;
+  }
+  
+  .title-row h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  /* Botones alineados */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .button-group-left,
+  .button-group-right {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Contenedor de 2 columnas */
+  .two-column-container {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .main-column {
+    flex: 2; /* Columna más grande */
+  }
+  
+  .side-column {
+    flex: 1; /* Columna secundaria más pequeña */
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que el contenido no se salga */
+  }
+  
+  /* Estilos responsivos */
+
+/* Pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-container {
+    padding: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group-left,
+  .button-group-right {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .two-column-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main-column, .side-column {
+    flex: 1;
+    width: 100%;
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .main-container {
+    padding: 1rem;
+  }
+
+  .header-row h1 {
+    font-size: 1.5rem;
+  }
+
+  .button-group-left,
+  .button-group-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .two-column-container {
+    padding: 1rem;
+  }
+
+  .main-column, .side-column {
+    flex: 1;
+    width: 100%;
+  }
+
+  .side-column {
+    margin-top: 1rem;
+  }
+  .tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Estilo para imágenes */
+.responsive-img {
+  width: 100%; /* Las imágenes ocupan todo el ancho de la columna */
+  height: 50%;
+  border-radius: 8px;
+
+}
+
+/* Contenedor de imágenes */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacio entre las imágenes */
+  width: 100%; /* Asegura que el contenedor no se salga del lado */
+  max-width: 100%; /* Limita el ancho al contenedor padre */
+}
+
+/* Estilo para cada caja de imagen */
+.image-box {
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* Bordes redondeados */
+  overflow: hidden; /* Asegura que la imagen se mantenga dentro del borde redondeado */
+  background-color: #e0e0e0; /* Color de fondo para mostrar si no hay imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para la imagen principal */
+.main-image-box {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor */
+  display: block;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .two-column-container {
+    flex-direction: column; /* Cambiar a una sola columna en pantallas pequeñas */
+  }
+
+  .side-column, .main-column {
+    flex: 1; /* Ambas columnas ocupan el 100% del ancho en pantallas pequeñas */
+  }
+
+}
+

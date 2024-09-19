@@ -1,0 +1,44 @@
+.text-accordion-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Texto de vista previa (recortado) */
+.preview-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Icono y texto de "Ver más" */
+.toggle-text {
+  font-size: 1rem;
+  color: #007bff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Acordeón responsivo */
+.accordion-responsive {
+  width: 40%;
+  max-width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .text-accordion-container {
+    padding: 0.5rem;
+  }
+
+  .preview-text, .toggle-text {
+    font-size: 0.9rem;
+  }
+
+  .accordion-responsive {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}

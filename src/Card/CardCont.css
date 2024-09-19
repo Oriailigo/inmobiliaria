@@ -1,0 +1,47 @@
+/* CardComponent.css */
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-icons {
+    display: flex;
+    gap: 0.001rem; /* Espacio entre los iconos */
+  }
+  
+  
+  .second-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el ícono y el texto */
+    margin-bottom: 1rem; /* Espacio debajo de la segunda fila */
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre los elementos del formulario */
+  }
+  .input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem; /* Espacio entre los elementos del formulario */
+  }
+  
+  .terms {
+    margin-top: 1rem; /* Espacio arriba del texto de términos y condiciones */
+  }
+  .container-center{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    justify-content: center;
+    align-items: center
+  }
+  .btn-min{
+    width: 100%; /* El botón ocupa todo el ancho del contenedor */
+    max-width: 200px; /* Establece un ancho máximo para evitar botones demasiado grandes */
+    padding: 0.5rem 1rem;
+  }

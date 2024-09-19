@@ -1,0 +1,46 @@
+/* Estilos para la tarjeta de contacto */
+.contact-card {
+  margin: 2rem auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Título debajo de la imagen */
+.info-title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor de las dos columnas debajo del título */
+.info-columns {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Fila con ícono y texto */
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.icon {
+  color: #333;
+  font-size: 24px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .info-columns {
+    flex-direction: column;
+  }
+}

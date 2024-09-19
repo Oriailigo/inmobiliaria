@@ -1,0 +1,17 @@
+/* CustomInput.css */
+.custom-input .MuiOutlinedInput-root {
+    border-color: grey; /* Color del borde por defecto */
+  }
+  
+  .custom-input .MuiOutlinedInput-root:hover fieldset {
+    border-color: orange; /* Color del borde al hacer hover */
+  }
+  
+  .custom-input .MuiOutlinedInput-root.Mui-focused fieldset {
+    border-color: orange; /* Color del borde al hacer clic (focus) */
+  }
+
+  .custom-input {
+    width: 100%; /* Estira el input al ancho completo del contenedor */
+  }
+  
