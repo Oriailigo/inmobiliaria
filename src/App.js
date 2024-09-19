@@ -9,6 +9,7 @@ import {Breadcrumb} from './BreadcrumbNavegacion/Breadcrumb';
 import {Input} from './ContactForm/InputForm';
 import {CardCont} from './Card/CardCont';
 import {AlquilerLayout} from './Alquiler/AlquilerLayout';
+import {VentaLayout} from './Ventas/VentasLayout';
 
 
 const defaultTodos=[
@@ -56,7 +57,7 @@ function App() {
   }
   return (
     <>
-      
+      <VentaLayout/>      
       <AlquilerLayout/>
       
       <TodoCount 
