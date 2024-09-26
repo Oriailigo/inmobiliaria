@@ -9,7 +9,11 @@ import {Breadcrumb} from './BreadcrumbNavegacion/Breadcrumb';
 import {Input} from './ContactForm/InputForm';
 import {CardCont} from './Card/CardCont';
 import {AlquilerLayout} from './Alquiler/AlquilerLayout';
+import {ContactoLayout} from './Contacto/ContactoLayout';
 import {VentaLayout} from './Ventas/VentasLayout';
+import { AboutUs } from './QuienesSomos/QuienesLayout';
+import { PropertySearchPage } from './VerMapa/VerMapaLayout';
+import { LoginContainer } from './Login/LoginLayout';
 
 
 const defaultTodos=[
@@ -57,7 +61,8 @@ function App() {
   }
   return (
     <>
-      <VentaLayout/>      
+    
+      <ContactoLayout/>      
       <AlquilerLayout/>
       
       <TodoCount 
