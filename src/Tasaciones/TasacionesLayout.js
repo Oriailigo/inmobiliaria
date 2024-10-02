@@ -3,14 +3,19 @@ import Button from '@mui/material/Button';
 import {CardCont} from '../Card/CardCont';
 import {CardIn} from '../Card/CardInfo';
 import {CardMa} from '../Card/CardMas';
+import {ButtonMenu} from '../Menu/ButtonMenu';
 import {Breadcrumb} from '../BreadcrumbNavegacion/Breadcrumb';
-import './AlquilerLayout.css';  // Importa los estilos
+import './TasacionesLayout.css';  // Importa los estilos
 
-function AlquilerLayout() {
+function TasacionesLayout() {
   return (
     <div className="web-page">
       {/* Header */}
       <header className="header">
+        <div className="header-row centered">
+        <ButtonMenu/>
+       
+        </div>
         <div className="header-row left-aligned">
         <Breadcrumb/>
         </div>
@@ -76,4 +81,4 @@ function AlquilerLayout() {
   );
 }
 
-export {AlquilerLayout};
+export {TasacionesLayout};

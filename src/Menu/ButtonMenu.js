@@ -5,6 +5,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import Box from '@mui/material/Box';
 import MenuIcon from '@mui/icons-material/Menu'; // Icono de menú
 import IconButton from '@mui/material/IconButton'; // Botón para el menú
+import { Link } from 'react-router-dom'; // Para enlazar las rutas
 
 import './ButtonMenu.css';  // Importa el archivo CSS
 
@@ -25,14 +26,30 @@ function ButtonMenu() {
       <Stack spacing={2} direction="row" className="desktop-menu">
         <HomeIcon />
         <Box component="section" >
-          <Button className="menu-button" variant="text">Inicio</Button>
-          <Button className="menu-button" variant="text">Alquileres</Button>
-          <Button className="menu-button" variant="text">Ventas</Button>
-          <Button className="menu-button" variant="text">Ver mapa</Button>
-          <Button className="menu-button" variant="text">Tasaciones</Button>
-          <Button className="menu-button" variant="text">Quienes somos</Button>
-          <Button className="menu-button" variant="text">Emprendimientos</Button>
-          <Button className="menu-button" variant="text">Contacto</Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/">Inicio</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/alquileres">Alquileres</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/ventas">Ventas</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/ver-mapa">Ver mapa</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/tasaciones">Tasaciones</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/quienes-somos">Quienes somos</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/emprendimientos">Emprendimientos</Link>
+          </Button>
+          <Button className="menu-button" variant="text">
+            <Link to="/contacto">Contacto</Link>
+          </Button>
         </Box>
         <Button variant="outlined" startIcon={<PersonIcon/>} onClick={() => console.log("Iniciar sesión")}>
           Iniciar sesión
@@ -46,14 +63,30 @@ function ButtonMenu() {
         </IconButton>
         {openMenu && (
           <div className="mobile-menu-content">
-            <Button className="menu-button" variant="text">Inicio</Button>
-            <Button className="menu-button" variant="text">Alquileres</Button>
-            <Button className="menu-button" variant="text">Ventas</Button>
-            <Button className="menu-button" variant="text">Ver mapa</Button>
-            <Button className="menu-button" variant="text">Tasaciones</Button>
-            <Button className="menu-button" variant="text">Quienes somos</Button>
-            <Button className="menu-button" variant="text">Emprendimientos</Button>
-            <Button className="menu-button" variant="text">Contacto</Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/">Inicio</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/alquileres">Alquileres</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/ventas">Ventas</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/ver-mapa">Ver mapa</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/tasaciones">Tasaciones</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/quienes-somos">Quienes somos</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/emprendimientos">Emprendimientos</Link>
+            </Button>
+            <Button className="menu-button" variant="text">
+              <Link to="/contacto">Contacto</Link>
+            </Button>
             <Button variant="outlined" startIcon={<PersonIcon/>} onClick={() => console.log("Iniciar sesión")}>
               Iniciar sesión
             </Button>

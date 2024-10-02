@@ -1,0 +1,118 @@
+/* Fondo y degradado */
+.background-section {
+    position: relative;
+    background-image: url('https://d1acdg20u0pmxj.cloudfront.net/ar/assets/media/webp/home/bg-remax-emprendimientos.webp');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(50, 50, 50, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Botones centrados */
+  .buttons-container {
+    display: flex;
+    gap: 16px;
+  }
+  
+  /* Contenedor de búsqueda */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .search-input, .search-select {
+    width: 200px;
+  }
+  
+  .search-button {
+    background-color: white;
+  }
+  
+  /* Botón de consultar inventario */
+  .inventory-button {
+    margin-top: 20px;
+  }
+  
+  /* Título de propiedades destacadas */
+  .featured-title {
+    margin-top: 40px;
+  }
+  
+  /* Propiedades destacadas */
+  .properties-section {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .property-card {
+    width: 300px;
+  }
+  
+  /* Sección inferior con tres divs */
+.custom-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Fondo oscuro en la parte trasera */
+  .back-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 500px;
+    background-color: rgb(42, 37, 37);
+    z-index: 1; /* Este div estará en la parte trasera */
+  }
+  
+  /* Imagen de fondo en el medio */
+  .right-div {
+    position: absolute;
+    top: 0;
+    margin-top:4rem;
+    left: 30rem; /* Desplazamiento a la derecha */
+    width: calc(90% - 30rem); /* Espacio entre el borde y el div */
+    height: 300px;
+    background-image: url('https://d1acdg20u0pmxj.cloudfront.net/ar/assets/media/webp/home/bg-remax-emprendimientos.webp');
+    background-size: cover;
+    background-position: 30%;
+    z-index: 2; /* Este div estará por delante del fondo oscuro */
+  }
+  
+  /* Texto superpuesto encima de ambos divs */
+  .text-overlay {
+    position: relative;
+    z-index: 3; /* Este div estará en la parte superior */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    margin-left: 2rem;
+    width: 40%;
+  }
+  
+  .mini-div {
+    background-color: lightgray;
+    padding: 5px;
+    margin-top: 8px;
+  }
+  

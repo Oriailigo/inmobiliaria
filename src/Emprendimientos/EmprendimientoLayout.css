@@ -1,0 +1,76 @@
+.my-component {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.my-component__row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.my-component__carousel {
+  background-color: #f0f0f0;
+  padding: 1rem;
+}
+
+.my-component__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.my-component__tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.my-component__date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-component__prices {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.my-component__description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-component__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.my-component__extra-info {
+  font-size: 0.9rem;
+}
+
+.my-component__contact-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.my-component__like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .my-component__row {
+    flex-direction: column;
+  }
+
+  .my-component__carousel,
+  .my-component__info,
+  .my-component__like {
+    flex: 1;
+  }
+}

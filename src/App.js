@@ -1,98 +1,44 @@
-import React from 'react';
-import {TodoCount} from './TodoCounter';
-import {TodoSearch} from './TodoSearch';
-import {TodoList} from './TodoList';
-import {TodoItem} from './TodoItem';
-import {CreateTodoButton} from './CreateTodoButton';
-import {ButtonMenu} from './Menu/ButtonMenu';
-import {Breadcrumb} from './BreadcrumbNavegacion/Breadcrumb';
-import {Input} from './ContactForm/InputForm';
-import {CardCont} from './Card/CardCont';
-import {AlquilerLayout} from './Alquiler/AlquilerLayout';
-import {ContactoLayout} from './Contacto/ContactoLayout';
-import {VentaLayout} from './Ventas/VentasLayout';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AlquilerLayout } from './Alquiler/AlquilerLayout';
+import { EmprendimientoLayout } from './Emprendimientos/EmprendimientoLayout';
+import { ContactoLayout } from './Contacto/ContactoLayout';
+import { VentaLayout } from './Ventas/VentasLayout';
 import { AboutUs } from './QuienesSomos/QuienesLayout';
 import { PropertySearchPage } from './VerMapa/VerMapaLayout';
 import { LoginContainer } from './Login/LoginLayout';
+import { TasacionesLayout } from './Tasaciones/TasacionesLayout'; // Si tienes este layout
+import { InicioLayout } from './Inicio/InicioLayout'; // Si tienes este layout
 
-
-const defaultTodos=[
-{text:"hacer la cena", completed:false},
-{text:"Sacar la basura", completed:true},
-{text:"Tomar el curso de React", completed:true},
-{text:"Comer sano", completed:false},
-]
+// Componente de menú de navegación (el que me diste)
+import { ButtonMenu } from './Menu/ButtonMenu';
 
 function App() {
-  const [todos, setTodos]= React.useState(defaultTodos);
-  const [searchValue, setSearchValue]= React.useState('');
-
-  const completedTodos=todos.filter(
-    todo => todo.completed
-  ).length;
-
-
-  const searchTodos=todos.filter(
-    todo =>{ 
-      let todoText=todo.text.toLowerCase();
-      let searchText=searchValue.toLowerCase();
-      return todoText.includes(searchText)}
-  );
-
-  const totalTodos=todos.length;
-  console.log(todos.length);
-
-  const completeTodo=(text)=>{
-    const newTodos=[...todos];
-    const todoIndex=newTodos.findIndex(
-      (todo) => todo.text === text
-    );
-    newTodos[todoIndex].completed=true;
-    setTodos(newTodos)
-  }
-
-  const deleteTodo=(text)=>{
-    const newTodos=[...todos];
-    const todoIndex=newTodos.findIndex(
-      (todo) => todo.text === text
-    );
-    newTodos.splice(todoIndex,1);
-    setTodos(newTodos);
-  }
   return (
-    <>
-    
-      <ContactoLayout/>      
-      <AlquilerLayout/>
+    <Router>
+      {/* Menú de navegación */}
+      <header className="header">
+        <div className="header-row centered">
+        <ButtonMenu/>
+        </div>
+     
+      </header>
+     
       
-      <TodoCount 
-        completed={completedTodos}
-        total={totalTodos}></TodoCount>
-      <TodoSearch
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <TodoList>
-        {searchTodos.map((todo)=>
-        <TodoItem 
-          key={todo.text} 
-          text={todo.text} 
-          completed={todo.completed}
-          onComplete={()=> completeTodo(todo.text)}
-          onDelete={()=> deleteTodo(todo.text)}
-          >
-
-
-          </TodoItem>)}
-
-      </TodoList>
-
-  <CreateTodoButton/> 
-      
-    </>
+      {/* Configuración de rutas */}
+      <Routes>
+        <Route path="/" element={<InicioLayout />} />
+        <Route path="/alquileres" element={<AlquilerLayout />} />
+        <Route path="/ventas" element={<VentaLayout />} />
+        <Route path="/ver-mapa" element={<PropertySearchPage />} />
+        <Route path="/tasaciones" element={<TasacionesLayout />} />
+        <Route path="/quienes-somos" element={<AboutUs />} />
+        <Route path="/emprendimientos" element={<EmprendimientoLayout />} />
+        <Route path="/contacto" element={<ContactoLayout />} />
+        <Route path="/iniciar-sesion" element={<LoginContainer />} />
+      </Routes>
+    </Router>
   );
 }
 
-
 export default App;
-
