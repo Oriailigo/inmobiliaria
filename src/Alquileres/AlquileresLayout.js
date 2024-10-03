@@ -2,9 +2,9 @@ import React from 'react';
 import { Divider, MenuItem,  Select } from '@mui/material';
 import {Filtros} from './Filtros'; // Importar el componente Filtros
 import {CardImg} from './CardImg'; // Importar el componente Filtros
-import './TasacionesLayout.css'; // Importar los estilos
+import './AlquileresLayout.css'; // Importar los estilos
 
-function TasacionesLayout() {
+function AlquileresLayout() {
   return (
     <div className="alquileres-layout">
       {/* Línea separadora superior */}
@@ -32,4 +32,4 @@ function TasacionesLayout() {
   );
 }
 
-export {TasacionesLayout} ;
+export {AlquileresLayout} ;

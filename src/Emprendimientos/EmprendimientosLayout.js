@@ -2,9 +2,9 @@ import React from 'react';
 import { Divider, MenuItem,  Select } from '@mui/material';
 import {Filtros} from './Filtros'; // Importar el componente Filtros
 import {CardImg} from './CardImg'; // Importar el componente Filtros
-import './TasacionesLayout.css'; // Importar los estilos
+import './EmprendimientosLayout.css'; // Importar los estilos
 
-function TasacionesLayout() {
+function EmprendimientosLayout() {
   return (
     <div className="alquileres-layout">
       {/* Línea separadora superior */}
@@ -18,7 +18,7 @@ function TasacionesLayout() {
 
       {/* Contenedor de párrafo y select alineados con flexbox */}
       <div className="paragraph-select-container">
-        <p>Texto del párrafo en el extremo izquierdo</p>
+        <p><b>3800</b>  propiedades en alquiler</p>
         <Select className="select-element" defaultValue="" variant="outlined" size="small">
           <MenuItem value="opcion1">Opción 1</MenuItem>
           <MenuItem value="opcion2">Opción 2</MenuItem>
@@ -32,4 +32,4 @@ function TasacionesLayout() {
   );
 }
 
-export {TasacionesLayout} ;
+export {EmprendimientosLayout} ;

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AlquilerLayout } from './Alquiler/AlquilerLayout';
-import { EmprendimientoLayout } from './Emprendimientos/EmprendimientoLayout';
+import { AlquileresLayout } from './Alquileres/AlquileresLayout';
+import { EmprendimientosLayout } from './Emprendimientos/EmprendimientosLayout';
 import { ContactoLayout } from './Contacto/ContactoLayout';
 import { VentaLayout } from './Ventas/VentasLayout';
 import { AboutUs } from './QuienesSomos/QuienesLayout';
@@ -28,12 +29,13 @@ function App() {
       {/* Configuración de rutas */}
       <Routes>
         <Route path="/" element={<InicioLayout />} />
-        <Route path="/alquileres" element={<AlquilerLayout />} />
+        <Route path="/alquileres" element={<AlquileresLayout />} />
+        <Route path="/alquiler" element={<AlquilerLayout />} /> {/* Nueva ruta para AlquilerLayout */}
         <Route path="/ventas" element={<VentaLayout />} />
         <Route path="/ver-mapa" element={<PropertySearchPage />} />
         <Route path="/tasaciones" element={<TasacionesLayout />} />
         <Route path="/quienes-somos" element={<AboutUs />} />
-        <Route path="/emprendimientos" element={<EmprendimientoLayout />} />
+        <Route path="/emprendimientos" element={<EmprendimientosLayout />} />
         <Route path="/contacto" element={<ContactoLayout />} />
         <Route path="/iniciar-sesion" element={<LoginContainer />} />
       </Routes>

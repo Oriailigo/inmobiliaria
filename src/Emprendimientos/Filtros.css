@@ -1,0 +1,39 @@
+/* Contenedor principal de filtros */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 0;
+    flex-wrap: wrap; /* Para que los elementos se reorganicen en pantallas pequeñas */
+  }
+  
+  /* Contenedor de los inputs */
+  .inputs-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Hace que los inputs se reorganicen si el espacio es reducido */
+  }
+  
+  .input {
+    width: 200px;
+  }
+  
+  /* Para pantallas pequeñas (menos de 600px de ancho) */
+  @media (max-width: 600px) {
+    .filter-container {
+      flex-direction: column; /* Los elementos se apilan en una columna */
+      align-items: flex-start;
+    }
+  
+    .inputs-container {
+      width: 100%;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .input {
+      width: 100%;
+    }
+  
+  }  

@@ -1,0 +1,54 @@
+/* Estilo del card personalizado */
+.custom-card {
+    display: flex;
+    width: 100%; /* Para que ocupe el 100% de su contenedor */
+    margin-bottom: 20px;
+  }
+  
+  /* Imagen que ocupa la mitad del card */
+  .card-img {
+    width: 50%; /* La mitad del card */
+  }
+  
+  /* Contenedor del contenido del card */
+  .card-content {
+    width: 50%; /* La otra mitad del card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Fila de íconos y texto pequeño */
+  .icon-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .icon-with-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  /* Estilo para alinear los iconos de la segunda fila */
+  .icon-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  /* Columna de favoritos al extremo derecho */
+  .favorite-column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+
+  /* Mantener el diseño en pantallas móviles */
+@media (max-width: 600px) {
+    .favorite-icon {
+      position: relative; /* No se cambia a posición absoluta */
+    }
+  }

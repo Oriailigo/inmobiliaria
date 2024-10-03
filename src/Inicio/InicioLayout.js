@@ -34,7 +34,7 @@ function InicioLayout() {
               <MenuItem value="casa">Casa</MenuItem>
               <MenuItem value="departamento">Departamento</MenuItem>
             </Select>
-            <IconButton color="primary" className="search-button">
+            <IconButton color="inherit"  sx={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }} >
               <SearchIcon />
             </IconButton>
           </Box>
@@ -57,30 +57,26 @@ function InicioLayout() {
         <CardImg/>
         <CardImg/>
       </Box>
+{/* Divs superpuestos el negro es relativo y el blanco absoluto */}
+<div className="section-wrapper"> 
+  
+    <div className="div-ng">
+      <div className="div-bl">
+        <h1>Oportunidad</h1>
+        <p>Rojas bla bla</p>
+        <p>Rojas bla bla</p>
+        <div className='div-g'>
+          <p>95,000 Dólares</p>
+        </div>
+      </div>
+    </div>
+    
+    <div className='div-img'>
+     
+    </div>
+  
+</div>
 
-      {/* Sección inferior con los tres divs */}
-      <Box className="custom-section">
-        {/* Primer div alineado a la izquierda */}
-        <Box className="left-div back-div">
-          <Typography variant="h6">Título</Typography>
-          <Typography variant="body2">Descripción del primer div</Typography>
-          
-        </Box>
-        <Box className="left-div sec-div">
-        <Typography variant="h6">Oportunidad</Typography>
-          <Typography variant="body2">Rojas e/ Av. Moreno y Av. Belgrano</Typography>
-          <Typography variant="body2">Casa 4 ambientes y garaje con parrilla</Typography>
-          <Box className="mini-div">
-          <Typography variant="body2">95,000 Dólares</Typography>
-          
-          </Box>
-        </Box>
-
-        {/* Segundo div con imagen de fondo */}
-        <Box className="right-div">
-         
-        </Box>
-      </Box>
     
      <div className="main-container">
        
