@@ -40,3 +40,12 @@
     justify-content: center;
     flex-direction: column;
   }
+
+  /* Responsividad para dispositivos móviles */
+@media (max-width: 896px) {
+  .form-container {
+   
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
