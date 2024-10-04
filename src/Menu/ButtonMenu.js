@@ -51,8 +51,9 @@ function ButtonMenu() {
             <Link to="/contacto">Contacto</Link>
           </Button>
         </Box>
-        <Button variant="outlined" startIcon={<PersonIcon/>} onClick={() => console.log("Iniciar sesión")}>
-          Iniciar sesión
+        <Button variant="outlined" startIcon={<PersonIcon/>}>
+          <Link to="/iniciar-sesion">Iniciar sesión</Link>
+          
         </Button>
       </Stack>
 
@@ -87,8 +88,8 @@ function ButtonMenu() {
             <Button className="menu-button" variant="text">
               <Link to="/contacto">Contacto</Link>
             </Button>
-            <Button variant="outlined" startIcon={<PersonIcon/>} onClick={() => console.log("Iniciar sesión")}>
-              Iniciar sesión
+            <Button variant="outlined" startIcon={<PersonIcon/>}>
+              <Link to="/iniciar-sesion">Iniciar sesión</Link>
             </Button>
           </div>
         )}

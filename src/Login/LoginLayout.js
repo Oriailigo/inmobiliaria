@@ -52,9 +52,10 @@ function LoginContainer() {
             alignItems: 'center', // Centrar verticalmente
             flexDirection: 'column',
             margin: '0 auto', // Asegurar que el card esté centrado
-            background: 'rgba(255, 255, 255, 0.8)', // Fondo blanco semi-transparente
-            borderRadius: 2,
-            boxShadow: 3,
+            background: 'none', // Fondo transparente
+            border: 'none', // Sin bordes
+            boxShadow: 'none', // Sin sombras
+            
           }}
         >
           <LoginCard 
@@ -71,7 +72,7 @@ function LoginContainer() {
         {/* Imagen al lado del formulario (opcional, solo para pantallas grandes) */}
         <Box
           component="img"
-          src="https://cdn.pixabay.com/photo/2018/02/27/06/30/skyscrapers-3184798_640.jpg"
+          src="/img/login.png"
           alt="Descripción de la imagen"
           sx={{
             width: '100%',
