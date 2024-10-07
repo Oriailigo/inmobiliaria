@@ -14,9 +14,9 @@ function AboutUs() {
 
       {/* Primera fila - Imagen y texto */}
       <ImageTextRow
-        imageUrl="https://via.placeholder.com/500"
+        imageUrl="/img/quien1.svg"
         altText="Descripción de la imagen"
-        description="Somos una empresa dedicada a la innovación y calidad en todos nuestros servicios. Nuestra misión es mejorar la vida de nuestros clientes mediante soluciones eficientes y de alto impacto."
+        description="Somos una empresa dedicada a brindar servicios inmobiliarios de alto nivel. Para ello contamos con profesionales orientados a satisfacer y superar los requerimientos de un mercado cada vez más competitivo y exigente. Ofrecemos un servicio personalizado a cada cliente. Nuestra trayectoria, experiencia y confiabilidad hacen que nuestros valores agregados sean la confianza y profesionalismo que nos destacan."
         reverse={false}
       />
 

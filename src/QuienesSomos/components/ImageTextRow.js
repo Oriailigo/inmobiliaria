@@ -11,7 +11,7 @@ function ImageTextRow({ title, imageUrl, altText, description, reverse }) {
       {/* Texto abajo en móviles y cambia de posición en pantallas grandes */}
       <Grid item xs={12} md={6} order={{ xs: 2, md: reverse ? 1 : 2 }}>
         {title && <Typography variant="h6" gutterBottom>{title}</Typography>}
-        <Typography variant="body1" paragraph>{description}</Typography>
+        <Typography sx={{ fontWeight: 'bold' }} variant="body1" paragraph>{description}</Typography>
       </Grid>
     </Grid>
   );

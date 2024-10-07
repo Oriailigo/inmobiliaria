@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AlquilerLayout } from './Alquiler/AlquilerLayout';
 import { AlquileresLayout } from './Alquileres/AlquileresLayout';
 import { EmprendimientosLayout } from './Emprendimientos/EmprendimientosLayout';
-// import { ContactoLayout } from './Contacto/ContactoLayout';
+import { ContactoLayout } from './Contacto/ContactoLayout';
 import { VentaLayout } from './Ventas/VentasLayout';
 import { AboutUs } from './QuienesSomos/QuienesLayout';
 import { PropertySearchPage } from './VerMapa/VerMapaLayout';
@@ -66,7 +66,7 @@ function App() {
         <Route path="/tasaciones" element={<TasacionesLayout />} />
         <Route path="/quienes-somos" element={<AboutUs />} />
         <Route path="/emprendimientos" element={<EmprendimientosLayout />} />
-        {/* <Route path="/contacto" element={<ContactoLayout />} /> */}
+         <Route path="/contacto" element={<ContactoLayout />} /> 
         <Route path="/iniciar-sesion" element={<LoginContainer />} />
       </Routes>
     </Router>

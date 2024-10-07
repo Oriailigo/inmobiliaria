@@ -1,7 +1,7 @@
 /* Fondo y degradado */
 .background-section {
     position: relative;
-    background-image: url('https://d1acdg20u0pmxj.cloudfront.net/ar/assets/media/webp/home/bg-remax-emprendimientos.webp');
+    background-image: url('/public/img/inicio.svg');
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -40,6 +40,7 @@
   .search-input, .search-select {
     width: 200px;
     background-color: white;
+    color: black;
   }
  
   
@@ -109,7 +110,8 @@
 
 /* Imagen de fondo */
 .section-wrapper .div-img {
-  background-image: url('https://d1acdg20u0pmxj.cloudfront.net/ar/assets/media/webp/home/bg-remax-emprendimientos.webp');
+  
+  background-image: url('/public/img/inicio3.svg');
   background-size: cover;
   width: 50vw;
   height: 25vw;
@@ -118,5 +120,11 @@
   z-index: 1; /* Menor que el z-index del div oscuro */
 }
 
+
+@media (max-width: 748px){
+.tamInput{
+  padding-left: '-2rem';
+  padding-right: '-2rem';
+}}
 
 
