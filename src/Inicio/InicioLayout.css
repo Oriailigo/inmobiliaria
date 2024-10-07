@@ -121,10 +121,48 @@
 }
 
 
+
 @media (max-width: 748px){
 .tamInput{
   padding-left: '-2rem';
   padding-right: '-2rem';
 }}
 
+
+.section-wrapper .div-ng {
+  position: absolute; /* Cambiar a absolute para superponer */
+  background-color: rgb(28, 37, 44);
+  width: 32vw;
+  height: 20vw;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 0.3rem;
+  align-items: center;
+  top: 2rem; /* Ajusta el valor para posicionar el div oscuro */
+  right: 56rem; /* Ajusta el valor según donde lo quieras en la imagen */
+  z-index: 2; /* Más alto que el z-index de la imagen */
+}
+ 
+.section-wrapper .div-bl {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 26vw;
+  height: 20vh;
+  left: 1rem;
+}
+ 
+.section-wrapper .div-g {
+  position: absolute;
+  width: 11vw;
+  height: 3vw;
+  background-color: rgb(217, 212, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+  z-index: 1;
+  top: 17rem;
+  left: 5.2rem;
+}
 
