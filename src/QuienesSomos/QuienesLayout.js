@@ -41,16 +41,16 @@ function AboutUs() {
       <div>
       <IconDescriptionRow
         icons={[
-          { icon: 'star', title: 'Servicialidad', description: 'Nos orientamos al otro para escuchar sus necesidades y satisfacerlas ampliamente tanto en el ámbito laboral como personal, destacando siempre las prioridades de nuestros clientes.' },
-          { icon: 'people', title: 'Respeto', description: 'Entendemos y actuamos respetuosamente ante cada situación que se nos presenta para crear un ambiente en el que prime la tolerancia y la comprensión hacia el otro como pilar fundamental de toda relación comercial.' }
+          { icon: '/img/quienIcon1.svg', title: 'Servicialidad', description: 'Nos orientamos al otro para escuchar sus necesidades y satisfacerlas ampliamente tanto en el ámbito laboral como personal, destacando siempre las prioridades de nuestros clientes.' },
+          { icon: '/img/quienIcon2.svg', title: 'Respeto', description: 'Entendemos y actuamos respetuosamente ante cada situación que se nos presenta para crear un ambiente en el que prime la tolerancia y la comprensión hacia el otro como pilar fundamental de toda relación comercial.' }
         ]}
       />
 
       {/* Quinta fila - Iconos con descripciones */}
       <IconDescriptionRow
         icons={[
-          { icon: 'public', title: 'Responsabilidad', description: 'Asumimos los compromisos de manera humana y profesional como verdaderos pactos de honor entre las partes y cumplimos con honradez y respeto la tarea que nos es confiada.' },
-          { icon: 'security', title: 'Excelencia', description: 'Damos de nosotros lo mejor y, más aún, en pos de lograr impregnar de calidad los servicios que brindamos.' }
+          { icon: '/img/quienIcon3.svg', title: 'Responsabilidad', description: 'Asumimos los compromisos de manera humana y profesional como verdaderos pactos de honor entre las partes y cumplimos con honradez y respeto la tarea que nos es confiada.' },
+          { icon: '/img/quienIcon4.svg', title: 'Excelencia', description: 'Damos de nosotros lo mejor y, más aún, en pos de lograr impregnar de calidad los servicios que brindamos.' }
         ]}
       />
       </div>

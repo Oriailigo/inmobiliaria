@@ -19,7 +19,7 @@ function AlquileresLayout() {
       {/* Contenedor de párrafo y select alineados con flexbox */}
       <div className="paragraph-select-container">
         <p><b>38000</b> propiedades en alquiler</p>
-        <Select className="select-element" defaultValue="" variant="outlined" size="small">
+        <Select className="select-element" defaultValue="Ordenar por" variant="outlined" size="small">
           <MenuItem value="opcion1">Opción 1</MenuItem>
           <MenuItem value="opcion2">Opción 2</MenuItem>
           <MenuItem value="opcion3">Opción 3</MenuItem>

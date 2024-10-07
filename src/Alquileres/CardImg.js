@@ -19,11 +19,11 @@ function CardImg({ image }) {
 
   return (
     <Link to="/Alquiler" style={{ textDecoration: 'none', color: 'inherit' }}> {/* Envolviendo el Card con Link */}
-    <Card sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, width: '100%', marginBottom: '20px' }}>
+    <Card sx={{ display: 'flex', gap: { xs: '0rem', sm: '2rem' }, flexDirection: { xs: 'column', sm: 'row' }, width: '100%', marginBottom: '20px' }}>
       {/* Imagen que ocupa la mitad izquierda */}
       <CardMedia
         component="img"
-        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '400px' } }}  // Ajustes responsivos
+        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '450px' } }}  // Ajustes responsivos
         image={ image }
         alt="Imagen"
       />
@@ -58,7 +58,7 @@ function CardImg({ image }) {
               onClick={handleFavoriteClick}
               className={`favorite-icon ${isFavorited ? 'favorited' : ''}`}
             >
-              <FavoriteIcon />
+              <FavoriteIcon    sx={{ marginRight: { xs: '2rem', sm: '0rem' }}}    />
             </IconButton>
           </Grid>
 

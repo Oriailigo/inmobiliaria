@@ -42,8 +42,27 @@
     padding: 2rem;
     display: flex;
     justify-content: center;
-    
+   
   }
+  .main-ventas{
+
+  align-items: center; /* Alinea verticalmente al contenido */
+    /* Imagen de fondo */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/img/ventas.svg'); /* Reemplaza con la ruta correcta */
+  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+  background-position: center center; /* Centra la imagen tanto horizontal como verticalmente */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+
+  /* Para hacer que el contenedor se ajuste a la imagen */
+  min-height: 100vh; /* Ocupa al menos el 100% de la altura de la pantalla */
+}
+  /* Hacer que el fondo sea responsive en pantallas más pequeñas */
+@media (max-width: 600px) {
+  .main-ventas{
+    background-size: contain; /* En pantallas pequeñas, ajusta la imagen */
+    padding: 1rem; /* Reduce el padding para dispositivos móviles */
+  }
+}
   
   .title-row h2 {
     text-align: left;

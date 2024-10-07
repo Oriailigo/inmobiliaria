@@ -8,7 +8,7 @@ function CenteredTitleDescription({ title, description }) {
         <Typography variant="h4" align="center" gutterBottom  sx={{ fontWeight: 'bold', textAlign: 'center' }}>
           {title}
         </Typography>
-        <Typography variant="body1" paragraph align="center" sx={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
+        <Typography variant="body1" paragraph align="left" sx={{ paddingLeft: '8rem', paddingRight: '8rem' }}>
           {description}
         </Typography>
       </Grid>

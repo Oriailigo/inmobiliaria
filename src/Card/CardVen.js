@@ -24,7 +24,7 @@ function CardVent() {
       <CardHeader
         title={
           <div className='center'>
-            <Typography variant="h6">Vendé tu propiedad</Typography>
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Vendé tu propiedad</Typography>
             <Typography variant="body2" color="textSecondary">
               Completá el formulario y una oficina adherida a la red de Franco se pondrá en contacto con vos para continuar con el proceso.
             </Typography>
@@ -57,7 +57,7 @@ function CardVent() {
       </CardContent>
       <CardActions className="container-center">
       <div className="container-center">
-      <Button variant="contained" color="info" className="btn-min">
+      <Button variant="contained" color="info" className="btn-min" sx={{ backgroundColor: '#FFD466', color: 'gray'}}>
             Enviar
           </Button>
           <p className="terms">

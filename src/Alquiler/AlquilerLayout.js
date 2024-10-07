@@ -48,7 +48,7 @@ function AlquilerLayout() {
         <div className="main-column">
           <p>Contenido principal de la página</p>
           <div className="main-image-box">
-            <img src="https://via.placeholder.com/600x400" alt="Imagen principal" className="main-image" />
+            <img src="/img/alquiler1.svg" alt="Imagen principal" className="main-image" />
           </div>
           <CardIn/>
           <CardMa  text="Este es un texto extremadamente largo que se recortará inicialmente. Si el usuario desea leer más, puede hacer clic en el acordeón para expandir el contenido completo..." />
@@ -59,13 +59,13 @@ function AlquilerLayout() {
           <p>Slide o contenido adicional</p>
           <div className="image-container">
           <div className="image-box">
-              <img src="https://via.placeholder.com/300x150" alt="Imagen 1" className="responsive-img" />
+              <img src="/img/alquiler11.svg" alt="Imagen 1" className="responsive-img" />
             </div>
             <div className="image-box">
-              <img src="https://via.placeholder.com/300x150" alt="Imagen 2" className="responsive-img" />
+              <img src="/img/alquiler12.svg" alt="Imagen 2" className="responsive-img" />
             </div>
             <div className="image-box">
-              <img src="https://via.placeholder.com/300x150" alt="Imagen 3" className="responsive-img" />
+              <img src="/img/alquiler13.svg" alt="Imagen 3" className="responsive-img" />
             </div>
           </div>
           <CardCont/>

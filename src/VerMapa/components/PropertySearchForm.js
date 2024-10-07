@@ -5,7 +5,7 @@ function PropertySearchForm({ cities, localities, operations, propertyTypes, bed
   return (
     <Box sx={{ width: '80%' }}>
       {/* Título centrado */}
-      <Typography variant="h5" align="center" gutterBottom>
+      <Typography variant="h5" align="center" gutterBottom sx={{ fontWeight: 'bold' }}>
         Buscador
       </Typography>
 

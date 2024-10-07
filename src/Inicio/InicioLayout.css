@@ -118,8 +118,29 @@
   border-radius: 0.5rem;
   position: relative;
   z-index: 1; /* Menor que el z-index del div oscuro */
+  margin-left: 35rem;
 }
-
+/* Media query para dispositivos móviles */
+@media (max-width: 600px) {
+  .section-wrapper .div-img {
+    margin-left: 0; /* Elimina el margin-left */
+  }
+  .section-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .section-wrapper .div-ng {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.3rem;
+    align-items: center;
+    top: 2rem;
+    margin-right: 0rem; 
+    z-index: 2;
+  }
+  
+}
 
 
 @media (max-width: 748px){
