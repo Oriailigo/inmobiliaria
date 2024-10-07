@@ -8,7 +8,7 @@ function IconDescriptionRow({ icons }) {
         <Grid item xs={12} md={6} key={index} textAlign="center">
           <Box display="flex" alignItems="center" justifyContent="center" mb={2}>
             <i className="material-icons">{iconObj.icon}</i>
-            <Typography variant="h6" sx={{ marginLeft: 1 }}>
+            <Typography variant="h6" sx={{ marginLeft: 1, fontWeight: 'bold' }}>
               {iconObj.title}
             </Typography>
           </Box>
