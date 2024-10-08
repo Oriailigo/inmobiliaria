@@ -6,13 +6,13 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import MailIcon from '@mui/icons-material/Mail';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import BathtubIcon from '@mui/icons-material/Bathtub';
-import BedIcon from '@mui/icons-material/Bed';
+import BuildIcon from '@mui/icons-material/Apartment';
 import './CardImg.css'; // Importar el archivo CSS
 import { Link } from 'react-router-dom'; // Importar Link para la navegación
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
-function CardImg() {
+function CardImg({ image }) {
   const [isFavorited, setIsFavorited] = useState(false);
 
   const handleFavoriteClick = () => {
@@ -21,12 +21,12 @@ function CardImg() {
 
   return (
     <Link to="/Alquiler" style={{ textDecoration: 'none', color: 'inherit' }}> {/* Envolviendo el Card con Link */}
-    <Card sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, width: '100%', marginBottom: '20px' }}>
+    <Card sx={{ display: 'flex', gap: { xs: '0rem', sm: '2rem' }, flexDirection: { xs: 'column', sm: 'row' }, width: '100%', marginBottom: '20px' }}>
       {/* Imagen que ocupa la mitad izquierda */}
       <CardMedia
         component="img"
-        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '400px' } }}  // Ajustes responsivos
-        image="https://via.placeholder.com/150"
+        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '550px' } }}  // Ajustes responsivos
+        image={ image }
         alt="Imagen"
       />
 
@@ -34,7 +34,7 @@ function CardImg() {
       <CardContent sx={{ width: { xs: '100%', sm: '50%' }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <Grid container spacing={2}>
           {/* Fila del precio y corazón */}
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={2} sx={{  marginLeft: '1rem',marginTop: '1rem' }}>
               <Chip label="Preventa" />
               <Chip label="Entrega estimada: Sempriembre 2025" variant="outlined" />
           </Stack>
@@ -81,31 +81,31 @@ function CardImg() {
             <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
               Avenida Ángel Gallardo 1000
             </Typography>
-            <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
+            <Typography variant="body1" sx={{ fontWeight: 'bold', marginTop: '1rem', marginBottom: '1rem'}}>
               Los Nogales 700 (RG435), Picanyui, Rio Negro, Argentina
             </Typography>
             {/* Fila 3: 4 íconos alineados a la izquierda */}
             <Box sx={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                <BedIcon />
-                <Typography variant="caption">6 unidades</Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '1rem' }}>
+                <BuildIcon />
+                <Typography variant="caption" sx={{fontWeight: 'bold' }}>6 unidades</Typography>
               </Box>
               
             </Box>
 
             {/* Fila 4: Párrafos */}
-            <Typography variant="body2">Descripción adicional del inmueble</Typography>
-            <Typography variant="body2">Información relevante sobre la propiedad</Typography>
+            <Typography variant="body2" sx={{  marginBottom: '1rem',fontWeight: 'bold' }}> LOTEO EN DINA HUAPI: LOS NOGALES Y PETUNIAS</Typography>
+            <Typography variant="body2"> Corredores responsables: Magdalena Gelain Mat. 133-RCP-13 F°212 T°I</Typography>
 
             {/* Fila 5: Iconos de contacto (WhatsApp, teléfono, mail) */}
             <Box sx={{ display: 'flex', gap: '8px', marginTop:{ xs: '4rem', sm: '8rem' } }}>
-              <IconButton>
-                <WhatsAppIcon />
+              <IconButton sx={{ backgroundColor:'#25D366' }}>
+                <WhatsAppIcon sx={{ color: 'white', backgroundColor:'#25D366' }} />
               </IconButton>
-              <IconButton>
-                <PhoneIcon />
+              <IconButton sx={{ border: '0.5px solid gray' }}>
+                <PhoneIcon  />
               </IconButton>
-              <IconButton>
+              <IconButton sx={{ border: '0.5px solid gray' }}>
                 <MailIcon />
               </IconButton>
             </Box>

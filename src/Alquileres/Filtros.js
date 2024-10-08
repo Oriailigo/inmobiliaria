@@ -16,20 +16,20 @@ function Filtros() {
           size="small"
         />
 
-        <Select className="input" defaultValue="" variant="outlined" size="small">
-          <MenuItem value="">Tipo de propiedad</MenuItem>
+        <Select className="input" defaultValue="Tipo de propiedad" variant="outlined" size="small">
+          <MenuItem value="Tipo de propiedad">Tipo de propiedad</MenuItem>
           <MenuItem value="casa">Casa</MenuItem>
           <MenuItem value="departamento">Departamento</MenuItem>
         </Select>
 
-        <Select className="input" defaultValue="" variant="outlined" size="small">
-          <MenuItem value="">Alquiler</MenuItem>
+        <Select className="input" defaultValue="Alquiler" variant="outlined" size="small">
+          <MenuItem value="Alquiler">Alquiler</MenuItem>
           <MenuItem value="venta">Venta</MenuItem>
           <MenuItem value="alquiler">Alquiler</MenuItem>
         </Select>
 
-        <Select className="input" defaultValue="" variant="outlined" size="small">
-          <MenuItem value="">Precio</MenuItem>
+        <Select className="input" defaultValue="Precio" variant="outlined" size="small">
+          <MenuItem value="Precio">Precio</MenuItem>
           <MenuItem value="100000">Hasta 100.000</MenuItem>
           <MenuItem value="200000">Hasta 200.000</MenuItem>
           <MenuItem value="300000">Hasta 300.000</MenuItem>

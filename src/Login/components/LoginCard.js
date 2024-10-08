@@ -5,12 +5,13 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import { Visibility, VisibilityOff, AccountCircle } from '@mui/icons-material';
 
+
 function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handleForgotPassword, showPassword, togglePasswordVisibility }) {
   return (
     <Card sx={{ maxWidth: 400, width: '100%', padding: 2, backgroundColor: 'rgba(255, 255, 255, 0.9)', borderRadius: 2 }}>
       <CardContent>
         {/* Título */}
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography variant="h6" align="center" gutterBottom sx={{fontWeight:'bold'}}>
           Ingresa tu email
         </Typography>
 
@@ -18,6 +19,7 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
         <TextField
           fullWidth
           placeholder="Email"
+          sx={{fontWeight:'bold',border:'1px solid black',borderRadius:'10px'}}
           margin="normal"
           variant="outlined"
           InputProps={{
@@ -36,6 +38,7 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
           placeholder="Contraseña"
           margin="normal"
           variant="outlined"
+          sx={{fontWeight:'bold',border:'1px solid black', borderRadius:'10px'}}
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
@@ -56,15 +59,15 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
         <Button
           fullWidth
           variant="contained"
-          sx={{ backgroundColor: 'black', color: 'white', marginTop: 2 }}
+          sx={{ backgroundColor: '#414141', color: 'white', marginTop: 2 }}
           onClick={handleLogin}
         >
           Continuar
         </Button>
 
         {/* Enlace Olvidé mi contraseña */}
-        <Typography align="center" sx={{ marginTop: 2 }}>
-          <Link href="#" onClick={handleForgotPassword}>Olvidé mi contraseña</Link>
+        <Typography align="center" sx={{ marginBottom: '4rem' }}>
+          <Link href="#" onClick={handleForgotPassword}  sx={{ textDecoration: 'none', color: 'black' }}>Olvidé mi contraseña</Link>
         </Typography>
 
         {/* Botones de Facebook y Google */}
@@ -82,7 +85,7 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
           {/* Botón de Google */}
           <Button
             variant="contained"
-            sx={{ backgroundColor: '#db4437', color: 'white' }}
+            sx={{ backgroundColor: 'white', color: 'black',border:'1px solid black'}}
             startIcon={<GoogleIcon />}
             fullWidth
           >
@@ -93,13 +96,14 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
         {/* Texto de registro */}
         <Typography variant="body2" sx={{ marginTop: 2 }} align="center">
           Si no tenés cuenta,{' '}
-          <Link href="#">registrate acá</Link>
+        
+          <Link href="/registro" sx={{ textDecoration: 'none', color: 'black' }}>registrate acá</Link>
         </Typography>
 
-        <Typography variant="body2" sx={{ marginTop: 1 }} align="center">
+        <Typography variant="body2" sx={{ marginTop: '2rem' }} align="center">
           Al registrarme acepto los{' '}
-          <Link href="#">términos, condiciones</Link>,{' '}
-          <Link href="#">y políticas de privacidad</Link>.
+          <Link href="#" sx={{ color: 'black' }}>términos, condiciones</Link>,{' '}
+          <Link href="#" sx={{ color: 'black' }}>y políticas de privacidad</Link>.
         </Typography>
       </CardContent>
     </Card>

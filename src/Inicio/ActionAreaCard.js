@@ -6,28 +6,29 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
+import BedIcon from '@mui/icons-material/Bed';
+import BathtubIcon from '@mui/icons-material/Bathtub';
 import './ActionAreaCard.css'; // Importamos el archivo de estilos
 
-function ActionAreaCard() {
+function ActionAreaCard({image,titulo,precio}) {
   return (
-    <Card sx={{ maxWidth: 345, position: 'relative' }}>
+    <Card sx={{ maxWidth: 379, position: 'relative' }}>
       <CardActionArea>
         {/* Contenedor de la imagen y elementos superpuestos */}
         <Box sx={{ position: 'relative' }}>
           <CardMedia
             component="img"
-            height="200"
-            image="https://d1acdg20u0pmxj.cloudfront.net/ar/assets/media/webp/home/bg-remax-emprendimientos.webp"
+            height="296"
+            image={image}
             alt="Imagen de ejemplo"
+            className="cardTam"
           />
           
           {/* Contenido superpuesto sobre la imagen */}
           <Box className="overlay-content">
             {/* Texto alineado a la izquierda */}
             <Typography className="overlay-text" variant="h6">
-              Gonzales y San Millan
+            {titulo}
             </Typography>
             
            {/* Contenedor padre para íconos, números y textos */}
@@ -35,10 +36,10 @@ function ActionAreaCard() {
               {/* Iconos alineados a la izquierda */}
               <Box className="overlay-icons">
                 <IconButton size="small" color="inherit">
-                  <FavoriteIcon />
+                  <BedIcon />
                 </IconButton>
                 <IconButton size="small" color="inherit">
-                  <ShareIcon />
+                  <BathtubIcon/>
                 </IconButton>
               </Box>
 
@@ -60,7 +61,7 @@ function ActionAreaCard() {
 
       {/* Texto en la parte inferior con fondo gris oscuro */}
       <Box sx={{ backgroundColor: '#333', color: 'white', padding: '8px', textAlign: 'left' }}>
-        <Typography sx={{marginLeft:'1rem'}} variant="body2">150,000 dólares</Typography>
+        <Typography sx={{marginLeft:'1rem'}} variant="body2">{precio}</Typography>
       </Box>
     </Card>
   );

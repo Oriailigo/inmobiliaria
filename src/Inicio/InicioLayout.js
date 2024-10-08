@@ -1,11 +1,7 @@
 import React,{useEffect} from 'react';
 import Button from '@mui/material/Button';
-import {CardIn} from '../Card/CardInfo';
-import {CardMa} from '../Card/CardMas';
 import { IconButton, TextField, Select, MenuItem, Typography, Box, Card, CardContent, CardMedia } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import { ActionAreaCard } from './ActionAreaCard'; // Si tienes este layout
 import { CardImg } from './CardImg'; // Si tienes este layout
 import '../Alquiler/AlquilerLayout.css';  // Importa los estilos
@@ -20,27 +16,79 @@ function InicioLayout() {
     <Box className="background-section">
         <Box className="overlay">
           {/* Botones centrados */}
-          <Box className="buttons-container">
-            <Button variant="contained">Quiero comprar</Button>
-            <Button variant="contained">Quiero alquilar</Button>
-            <Button variant="contained">Quiero vender</Button>
+          <Box className="buttons-container" sx={{ marginBottom: '1rem' }} >
+            <Button variant="contained" sx={{ backgroundColor: '#1C252C', color: '#FFFFFF' ,fontWeight: 'bold', paddingLeft: '2rem', paddingRight: '2rem'}}>Quiero comprar</Button>
+            <Button variant="contained"sx={{ backgroundColor: 'white', color: 'black' ,fontWeight: 'bold' , paddingLeft: '2rem', paddingRight: '2rem'}}>Quiero alquilar</Button>
+            <Button variant="contained"sx={{ backgroundColor: 'white', color: 'black' ,fontWeight: 'bold' , paddingLeft: '2rem', paddingRight: '2rem'}}>Quiero vender</Button>
           </Box>
 
           {/* Input, Selector y botón Buscar */}
-          <Box className="search-container">
-            <TextField className="search-input" placeholder="¿Dónde querés mudarte?" variant="outlined" />
-            <Select defaultValue="" className="search-select">
-              <MenuItem value="">Tipo de inmueble seleccionado</MenuItem>
+          <Box className="search-container" sx={{ display: 'flex', gap: '0rem', alignItems: 'center' }}>
+            <input
+              type="text"
+              className="search-input tamInput"
+              placeholder="¿Dónde querés mudarte?"
+              style={{
+                paddingLeft: '2rem',
+                paddingRight: '2rem',
+                height: '50px', // Igualamos la altura con el Select y el IconButton
+                border: '1px solid rgba(0, 0, 0, 0.23)',
+                borderRadius: '4px',
+                outline: 'none'
+               
+              }}
+            />
+
+            <Select
+              defaultValue="Tipo de inmueble seleccionado"
+              className="search-select"
+              sx={{
+                paddingLeft: '2rem',
+                paddingRight: '2rem',
+                height: '50px', // Igualamos la altura
+                width: 'auto',
+                fontWeight: 'bold',
+                '@media (max-width: 748px)': { // Eliminar padding en dispositivos móviles
+                  paddingLeft: '0rem',
+                  paddingRight: '0rem',
+                },
+              }}
+            >
+              <MenuItem value="Tipo de inmueble seleccionado">Tipo de inmueble seleccionado</MenuItem>
               <MenuItem value="casa">Casa</MenuItem>
               <MenuItem value="departamento">Departamento</MenuItem>
             </Select>
-            <IconButton color="inherit"  sx={{ backgroundColor: 'rgba(0, 0, 0, 0.8)' }} >
-              <SearchIcon />
+
+            <IconButton
+              color="inherit"
+              sx={{
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                height: '50px', // Igualamos la altura con el input y el select
+                paddingLeft: '2rem', // Ancho izquierda
+                paddingRight: '2rem', // Ancho derecha
+                borderRadius: '8px',
+                backgroundColor: '#1C252C', color: '#FFFFFF',
+                '@media (max-width: 748px)': { // Eliminar padding en dispositivos móviles
+                  paddingLeft: '1rem',
+                  paddingRight: '1rem',
+                },
+              }}
+            >
+               <SearchIcon/>
             </IconButton>
           </Box>
 
+
           {/* Botón de consultar inventario */}
-          <Button variant="contained" className="inventory-button" startIcon={<SearchIcon />}>
+          <Button variant="contained" className="inventory-button" startIcon={<img
+                  src={`img/inicioIcon.svg`} // Ruta de la imagen en la carpeta public
+                  alt="Buscar"
+                  style={{
+                    height: '100%', // Ajustar la imagen para que ocupe el espacio del botón
+                    width: 'auto',
+                    
+                  }}
+                />} sx={{ marginTop: '4rem', marginBottom: '4rem',backgroundColor: '#1C252C', color: '#FFFFFF'}}>
             Consulta todo el inventario
           </Button>
 
@@ -54,8 +102,8 @@ function InicioLayout() {
       {/* Sección de propiedades destacadas */}
       <Box className="properties-section">
         {/* Primera y segunda propiedad */}
-        <CardImg/>
-        <CardImg/>
+        <CardImg image="/img/inicio1.svg"  />
+        <CardImg image="/img/inicio2.svg" />
       </Box>
 {/* Divs superpuestos el negro es relativo y el blanco absoluto */}
 <div className="section-wrapper"> 
@@ -96,16 +144,16 @@ function InicioLayout() {
           
           {/* Botones alineados a la derecha */}
           <div className="button-group-right">
-          <ActionAreaCard/>
-          <ActionAreaCard/>
-          <ActionAreaCard/>
+          <ActionAreaCard image="/img/inicio4.svg" titulo="Casa en Del Carril" precio="75,000 dolares"/>
+          <ActionAreaCard image="/img/inicio5.svg" titulo="Gonzalez y San Millan" precio="150,000 dolares" />
+          <ActionAreaCard image="/img/inicio6.jpg" titulo="Casa a restaurar + garaje" precio="80,000 dolares" />
           </div>
           
         </div>
         
       </div>
       <div className="container-center">
-      <Button variant="outlined">Conocer más</Button>
+      <Button variant="outlined" sx={{backgroundColor: '#FFD466', color: 'black'}}>Conocer más</Button>
       </div>
 
     

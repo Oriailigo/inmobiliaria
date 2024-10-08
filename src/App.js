@@ -3,13 +3,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AlquilerLayout } from './Alquiler/AlquilerLayout';
 import { AlquileresLayout } from './Alquileres/AlquileresLayout';
 import { EmprendimientosLayout } from './Emprendimientos/EmprendimientosLayout';
-// import { ContactoLayout } from './Contacto/ContactoLayout';
+import { ContactoLayout } from './Contacto/ContactoLayout';
 import { VentaLayout } from './Ventas/VentasLayout';
 import { AboutUs } from './QuienesSomos/QuienesLayout';
 import { PropertySearchPage } from './VerMapa/VerMapaLayout';
 import { LoginContainer } from './Login/LoginLayout';
 import { TasacionesLayout } from './Tasaciones/TasacionesLayout'; // Si tienes este layout
 import { InicioLayout } from './Inicio/InicioLayout'; // Si tienes este layout
+import { DatosLayout } from './DatosPersonales/DatosLayout'; // Si tienes este layout
+import { FavoritoLayout } from './Favorito/FavoritoLayuout'; // Si tienes este layout
+
+import { Footer } from './Footer/Footer'; // Si tienes este layout
 
 // Componente de menú de navegación (el que me diste)
 import { ButtonMenu } from './Menu/ButtonMenu';
@@ -17,6 +21,7 @@ import { fetchData } from './Servicio/httpService';
 import { getAllPropiedades, getPropiedadesFavoritas, updateOrCreatePropiedad } from './Servicio/propiedadService';
 import { authenticateUser } from './Servicio/authService';
 import UploadComponent from './UploadComponent ';
+import { RegisterLayout } from './Register/RegisterLayout';
 
 function App() {
 
@@ -51,6 +56,7 @@ function App() {
       <header className="header">
         <div className="header-row centered">
         <ButtonMenu/>
+        
         </div>
      
       </header>
@@ -66,10 +72,22 @@ function App() {
         <Route path="/tasaciones" element={<TasacionesLayout />} />
         <Route path="/quienes-somos" element={<AboutUs />} />
         <Route path="/emprendimientos" element={<EmprendimientosLayout />} />
-        {/* <Route path="/contacto" element={<ContactoLayout />} /> */}
+         <Route path="/contacto" element={<ContactoLayout />} /> 
         <Route path="/iniciar-sesion" element={<LoginContainer />} />
+        <Route path="/datos-personales" element={<DatosLayout />} />
+        <Route path="/favoritos" element={<FavoritoLayout />} />
+        <Route path="/registro" element={<RegisterLayout />} />
+        
       </Routes>
+      {/* Footer */}
+      <footer style={{ width: '100%', marginTop: 'auto' }}> {/* Footer con ancho completo */}
+        <Footer />
+      </footer>
     </Router>
+   
+
+    
+   
   );
 }
 

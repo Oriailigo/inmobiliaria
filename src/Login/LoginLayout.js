@@ -31,7 +31,7 @@ function LoginContainer() {
             position: 'absolute',
             top: 0,
             left: 0,
-            backgroundImage: 'url(https://cdn.pixabay.com/photo/2018/02/27/06/30/skyscrapers-3184798_640.jpg)',
+            backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/img/login.svg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: -1, // Coloca la imagen detrás del card
@@ -72,7 +72,7 @@ function LoginContainer() {
         {/* Imagen al lado del formulario (opcional, solo para pantallas grandes) */}
         <Box
           component="img"
-          src="/img/login.png"
+          src="/img/login.svg"
           alt="Descripción de la imagen"
           sx={{
             width: '100%',

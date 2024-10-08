@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, CardContent, Button, Typography, TextField, Link, Box, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
-
+import React, { useState }  from 'react';
+import { Card, CardContent, Button, Typography, TextField, Link, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
+import {CustomModal} from './Modal'; // Importa el modal personalizado
 function ContactForm() {
   const [category, setCategory] = React.useState('');
 
@@ -11,18 +11,21 @@ function ContactForm() {
   const handleSubmit = () => {
     console.log('Formulario enviado');
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
   return (
     <Card sx={{ maxWidth: 500, width: '100%', padding: 3, backgroundColor: 'rgba(255, 255, 255, 0.9)', borderRadius: 2 }}>
-      <CardContent sx={{ display:'flex', alignItems:'center' }}>
+      <CardContent sx={{ display:'flex', alignItems:'center', flexDirection:'column' }}>
         {/* Título */}
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography variant="h6" align="center" gutterBottom sx={{fontWeight:'bold'}}>
           Contacto
         </Typography>
         
         {/* Descripción */}
         <Typography variant="body2" align="center" color="textSecondary" gutterBottom>
-          Por favor completa el formulario con tus datos para que podamos contactarte.
+          Completa el formulario para contactarnos sobre cualquier pregunta o comentario que tengas y nos conectaremos a la brevedad.
         </Typography>
 
         {/* Nombre y Apellido */}
@@ -32,6 +35,7 @@ function ContactForm() {
           placeholder="Ingrese su nombre completo"
           margin="normal"
           variant="outlined"
+          color="textSecondary"
         />
 
         {/* Teléfono */}
@@ -88,19 +92,22 @@ function ContactForm() {
         />
 
         {/* Botón de enviar */}
-        <Button
-          fullWidth
-          variant="contained"
-          sx={{ backgroundColor: 'black', color: 'white', marginTop: 2 }}
-          onClick={handleSubmit}
-        >
-          Enviar
-        </Button>
-
+        <div>
+          <Button
+            fullWidth
+            variant="contained"
+            sx={{ backgroundColor: '#FFD466', color: 'gray', marginTop: 2 }}
+           
+            onClick={handleOpenModal}
+          >
+            Enviar
+          </Button>
+          <CustomModal open={isModalOpen} onClose={handleCloseModal} />
+        </div>
         {/* Términos y condiciones */}
-        <Typography variant="body2" align="center" color="textSecondary" sx={{ marginTop: 2 }}>
-          Al enviar este formulario aceptas nuestros{' '}
-          <Link href="#">términos y condiciones</Link>.
+        <Typography variant="body2" align="center" color="textSecondary" sx={{ marginTop: 2, fontWeight:'bold',color:'black' }} >
+          Al enviar se estan aceptando los {' '}
+          <Link href="#" sx={{fontWeight:'bold',color:'black'}}>Términos y Condiciones de Uso y la Politica de Privacidad</Link>.
         </Typography>
       </CardContent>
     </Card>

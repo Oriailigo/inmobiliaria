@@ -7,7 +7,7 @@ function VentaLayout() {
   return (
     <div className="web-page">
       {/* Contenedor principal */}
-      <div className="main-container">
+      <div className="main-container main-ventas">
         <div className="content-form">
           <CardVent/>
         </div>
