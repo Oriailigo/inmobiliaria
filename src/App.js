@@ -10,6 +10,7 @@ import { PropertySearchPage } from './VerMapa/VerMapaLayout';
 import { LoginContainer } from './Login/LoginLayout';
 import { TasacionesLayout } from './Tasaciones/TasacionesLayout'; // Si tienes este layout
 import { InicioLayout } from './Inicio/InicioLayout'; // Si tienes este layout
+import { Footer } from './Footer/Footer'; // Si tienes este layout
 
 // Componente de menú de navegación (el que me diste)
 import { ButtonMenu } from './Menu/ButtonMenu';
@@ -69,7 +70,15 @@ function App() {
          <Route path="/contacto" element={<ContactoLayout />} /> 
         <Route path="/iniciar-sesion" element={<LoginContainer />} />
       </Routes>
+      {/* Footer */}
+      <footer style={{ width: '100%', marginTop: 'auto' }}> {/* Footer con ancho completo */}
+        <Footer />
+      </footer>
     </Router>
+   
+
+    
+   
   );
 }
 

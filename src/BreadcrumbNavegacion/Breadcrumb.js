@@ -36,7 +36,7 @@ function Breadcrumb() {
   ];
 
   return (
-    <Stack spacing={2} sx={{ marginTop: '2rem', marginBottom: '2rem' }}>
+    <Stack spacing={2} sx={{ marginTop: '0rem', marginBottom: '0rem' }}>
   
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}
