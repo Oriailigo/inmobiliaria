@@ -20,6 +20,7 @@ export const updateFavorito = async (favoritoDTO) => {
 };
 
 
+
 /**
  * Obtiene el listado de propiedaes con paginado.
  * @param {*} pageable 
