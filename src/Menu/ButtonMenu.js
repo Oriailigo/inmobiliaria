@@ -59,6 +59,11 @@ function ButtonMenu() {
           <Link to="/datos-personales">Datos personales</Link>
           
         </Button>
+        <Button className="menu-button" variant="text">
+          <Link to="/favoritos">Favoritos</Link>
+          
+        </Button>
+        
       </Stack>
 
       {/* Menú hamburguesa para dispositivos móviles */}

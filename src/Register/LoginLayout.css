@@ -1,0 +1,17 @@
+.columna-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsividad para dispositivos móviles */
+@media (max-width: 600px) {
+  .responsive-image {
+    width: 100%;
+  }
+}

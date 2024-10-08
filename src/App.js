@@ -11,7 +11,7 @@ import { LoginContainer } from './Login/LoginLayout';
 import { TasacionesLayout } from './Tasaciones/TasacionesLayout'; // Si tienes este layout
 import { InicioLayout } from './Inicio/InicioLayout'; // Si tienes este layout
 import { DatosLayout } from './DatosPersonales/DatosLayout'; // Si tienes este layout
-import { FavoritesCard } from './Favorito/FavoritoCard'; // Si tienes este layout
+import { FavoritoLayout } from './Favorito/FavoritoLayuout'; // Si tienes este layout
 
 import { Footer } from './Footer/Footer'; // Si tienes este layout
 
@@ -21,6 +21,7 @@ import { fetchData } from './Servicio/httpService';
 import { getAllPropiedades, getPropiedadesFavoritas, updateOrCreatePropiedad } from './Servicio/propiedadService';
 import { authenticateUser } from './Servicio/authService';
 import UploadComponent from './UploadComponent ';
+import { RegisterLayout } from './Register/RegisterLayout';
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
       <header className="header">
         <div className="header-row centered">
         <ButtonMenu/>
-        <FavoritesCard/>
+        
         </div>
      
       </header>
@@ -74,6 +75,8 @@ function App() {
          <Route path="/contacto" element={<ContactoLayout />} /> 
         <Route path="/iniciar-sesion" element={<LoginContainer />} />
         <Route path="/datos-personales" element={<DatosLayout />} />
+        <Route path="/favoritos" element={<FavoritoLayout />} />
+        <Route path="/registro" element={<RegisterLayout />} />
         
       </Routes>
       {/* Footer */}
