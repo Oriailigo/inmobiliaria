@@ -1,20 +1,8 @@
 import React, { useState } from 'react';
 import { TextField, Select, MenuItem, Button, Box } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import { FiltroPopUp } from './componentes/FiltroPopUp';
 import './Filtros.css'; // Importamos los estilos
-
 function Filtros() {
-  const [filtersCount, setFiltersCount] = useState(0);
-  const [isPopupOpen, setIsPopupOpen] = useState(false); // Estado para controlar la ventana emergente
-
-  const handleFiltersButtonClick = () => {
-    if (!isPopupOpen) {
-      setFiltersCount(filtersCount + 1); // Aumentar el contador de filtros solo si el popup está cerrado
-    }
-    setIsPopupOpen(true); // Abrir la ventana emergente
-  };
-
   return (
     <Box className="filter-container">
       {/* Contenedor de inputs */}
@@ -46,19 +34,9 @@ function Filtros() {
         </Select>
       </Box>
 
-      {/* Botón de filtros */}
-      <Button
-        variant="contained"
-        startIcon={<FilterListIcon />}
-        onClick={handleFiltersButtonClick} // Manejar el clic en el botón
-      >
-        Filtros ({filtersCount})
-      </Button>
-
-      {/* Ventana emergente */}
-      <FiltroPopUp open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+    
     </Box>
   );
 }
 
-export { Filtros };
+export {Filtros};

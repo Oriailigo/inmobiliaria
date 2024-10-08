@@ -55,6 +55,10 @@ function ButtonMenu() {
           <Link to="/iniciar-sesion">Iniciar sesión</Link>
           
         </Button>
+        <Button className="menu-button" variant="text">
+          <Link to="/datos-personales">Datos personales</Link>
+          
+        </Button>
       </Stack>
 
       {/* Menú hamburguesa para dispositivos móviles */}

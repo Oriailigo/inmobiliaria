@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -13,12 +13,17 @@ import './CardVent.css';  // Importa el archivo CSS
 import {Input} from '../ContactForm/InputForm';
 import {BasicSelect} from '../ContactForm/SelectForm';
 import {TextFieldc} from '../ContactForm/TextfieldForm';
+import {CustomModal} from '../Ventas/Modal'; // Importa el modal personalizado
 
 const StyledCard = styled(Card)({
   padding: '2rem',
 });
 
 function CardVent() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
   return (
     <StyledCard>
       <CardHeader
@@ -57,9 +62,13 @@ function CardVent() {
       </CardContent>
       <CardActions className="container-center">
       <div className="container-center">
-      <Button variant="contained" color="info" className="btn-min" sx={{ backgroundColor: '#FFD466', color: 'gray'}}>
-            Enviar
-          </Button>
+          <div>
+            <Button variant="contained" color="info" className="btn-min" sx={{ backgroundColor: '#FFD466', color: 'gray'}} onClick={handleOpenModal}>
+                  Enviar
+                </Button>
+                {/* Modal personalizado */}
+            <CustomModal open={isModalOpen} onClose={handleCloseModal} />
+          </div>
           <p className="terms">
             Al enviar se están aceptando los Términos y Condiciones de Uso y la Política de Privacidad
           </p>

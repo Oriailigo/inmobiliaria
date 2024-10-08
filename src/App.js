@@ -10,6 +10,9 @@ import { PropertySearchPage } from './VerMapa/VerMapaLayout';
 import { LoginContainer } from './Login/LoginLayout';
 import { TasacionesLayout } from './Tasaciones/TasacionesLayout'; // Si tienes este layout
 import { InicioLayout } from './Inicio/InicioLayout'; // Si tienes este layout
+import { DatosLayout } from './DatosPersonales/DatosLayout'; // Si tienes este layout
+import { FavoritesCard } from './Favorito/FavoritoCard'; // Si tienes este layout
+
 import { Footer } from './Footer/Footer'; // Si tienes este layout
 
 // Componente de menú de navegación (el que me diste)
@@ -52,6 +55,7 @@ function App() {
       <header className="header">
         <div className="header-row centered">
         <ButtonMenu/>
+        <FavoritesCard/>
         </div>
      
       </header>
@@ -69,6 +73,8 @@ function App() {
         <Route path="/emprendimientos" element={<EmprendimientosLayout />} />
          <Route path="/contacto" element={<ContactoLayout />} /> 
         <Route path="/iniciar-sesion" element={<LoginContainer />} />
+        <Route path="/datos-personales" element={<DatosLayout />} />
+        
       </Routes>
       {/* Footer */}
       <footer style={{ width: '100%', marginTop: 'auto' }}> {/* Footer con ancho completo */}

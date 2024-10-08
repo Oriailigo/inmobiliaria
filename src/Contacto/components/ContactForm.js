@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import { Card, CardContent, Button, Typography, TextField, Link, MenuItem, Select, FormControl, InputLabel } from '@mui/material';
-
+import {CustomModal} from './Modal'; // Importa el modal personalizado
 function ContactForm() {
   const [category, setCategory] = React.useState('');
 
@@ -11,7 +11,10 @@ function ContactForm() {
   const handleSubmit = () => {
     console.log('Formulario enviado');
   };
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
   return (
     <Card sx={{ maxWidth: 500, width: '100%', padding: 3, backgroundColor: 'rgba(255, 255, 255, 0.9)', borderRadius: 2 }}>
       <CardContent sx={{ display:'flex', alignItems:'center', flexDirection:'column' }}>
@@ -89,15 +92,18 @@ function ContactForm() {
         />
 
         {/* Botón de enviar */}
-        <Button
-          fullWidth
-          variant="contained"
-          sx={{ backgroundColor: '#FFD466', color: 'gray', marginTop: 2 }}
-          onClick={handleSubmit}
-        >
-          Enviar
-        </Button>
-
+        <div>
+          <Button
+            fullWidth
+            variant="contained"
+            sx={{ backgroundColor: '#FFD466', color: 'gray', marginTop: 2 }}
+           
+            onClick={handleOpenModal}
+          >
+            Enviar
+          </Button>
+          <CustomModal open={isModalOpen} onClose={handleCloseModal} />
+        </div>
         {/* Términos y condiciones */}
         <Typography variant="body2" align="center" color="textSecondary" sx={{ marginTop: 2, fontWeight:'bold',color:'black' }} >
           Al enviar se estan aceptando los {' '}
