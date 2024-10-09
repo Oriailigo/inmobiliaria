@@ -1,0 +1,30 @@
+/* Contenedor principal del layout */
+.dashboard-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Área de contenido a la derecha */
+  .content-area {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  /* Título del dashboard */
+  .dashboard-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Subtítulo en gris */
+  .dashboard-subtitle {
+    color: grey;
+    margin-bottom: 2rem;
+  }
+  .cont-text{
+    display: flex;
+    align-items: baseline;
+    gap:1rem;
+  }

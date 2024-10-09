@@ -23,6 +23,8 @@ import { authenticateUser } from './Servicio/authService';
 import UploadComponent from './UploadComponent ';
 import { RegisterLayout } from './Register/RegisterLayout';
 import { Navbar } from './Navbar/Navbar';
+import { DashboardLayout } from './Administrador/Admin';
+
 function App() {
 
   useEffect(()=>{
@@ -52,6 +54,7 @@ function App() {
 
   return (
     <Router>
+      <DashboardLayout/>
       {/* Menú de navegación */}
       <header className="header">
         <div>
@@ -77,6 +80,7 @@ function App() {
         <Route path="/datos-personales" element={<DatosLayout />} />
         <Route path="/favoritos" element={<FavoritoLayout />} />
         <Route path="/registro" element={<RegisterLayout />} />
+        <Route path="/administrador" element={<DashboardLayout />} />
         
       </Routes>
       {/* Footer */}

@@ -1,0 +1,90 @@
+.sidemenu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between!important;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #f5f5f5; /* Color de fondo del menú */
+  }
+  
+  /* Estilo para el botón Agregar */
+  .add-button {
+    background-color: #FBBC05!important;
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Estilo común para los botones del menú (sin bordes ni fondo) */
+  .menu-button {
+    background: none;
+    border: none;
+    color: #000!important;
+    justify-content: flex-start!important;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: none;
+    padding: 0;
+  }
+  
+  /* Título de secciones (Analytics, Support) */
+  .menu-title {
+    color: gray;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Contenedor para el botón de Propiedades con el tag New */
+  .menu-button-with-tag {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .new-tag {
+    background-color: #e0bbff; /* Violeta claro */
+    color: #7b1fa2; /* Violeta fuerte */
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Botones de Ajustes y Cerrar Sesión */
+  .bottom-buttons {
+    display: flex;
+    flex-direction: column!important;
+    
+    gap: 1rem;
+    margin-top: auto;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .sidemenu-container {
+      padding: 0.5rem;
+    }
+  
+    .add-button {
+      font-size: 0.8rem;
+    }
+  
+    .menu-button {
+      font-size: 0.8rem;
+    }
+  
+    .menu-title {
+      font-size: 0.8rem;
+    }
+  
+    .new-tag {
+      font-size: 0.7rem;
+    }
+  
+    .bottom-buttons {
+      gap: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,28 @@
+/* Imagen de propiedad */
+.property-image {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Link de "Ver" */
+  .view-link {
+    margin-right: 1rem;
+  }
+  
+  /* Contenedor de la tabla */
+  .table-container {
+    margin-top: 2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .property-image {
+      width: 80px;
+    }
+  
+    .view-link {
+      font-size: 0.9rem;
+    }
+  }
+  

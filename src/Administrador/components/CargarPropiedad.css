@@ -1,0 +1,76 @@
+.cargar-propiedad-container {
+    padding: 2rem;
+  }
+  
+  .input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input-field {
+    margin-bottom: 1rem;
+  }
+  
+  .selection-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .selection-text {
+    margin-right: 1rem;
+  }
+  
+  .option-select {
+    min-width: 200px; /* Ajusta el ancho según tus necesidades */
+  }
+  
+  .media-upload-container {
+    display: flex;
+    flex-direction: row-reverse; /* Cambia a columna para mostrar la entrada y las tarjetas */
+    align-items: flex-start; /* Alinea todo a la izquierda */
+  }
+  
+  .file-input {
+    margin-bottom: 1rem; /* Espacio entre el input de archivo y las tarjetas */
+  }
+  
+  .media-cards {
+    display: flex;
+    flex-direction: column; /* Alinear las tarjetas en columna */
+   gap:0.5rem;/* Espacio entre las tarjetas */
+    width: 100%;
+  }
+  
+  .media-card {
+    display: flex;
+    align-items: center; /* Alinea imagen y texto */
+    width: 100%; /* Ajustar el ancho de la tarjeta */
+    max-width: 300px; /* Ajustar el ancho máximo de la tarjeta */
+  }
+  
+  .media-preview {
+    width: 150px; /* Tamaño fijo para la imagen o video */
+    height: 100px; /* Mantiene la proporción de la imagen/video */
+    margin-right: 0.5rem; /* Espacio entre la imagen y la descripción */
+    border-radius: 8px; /* Esquinas redondeadas */
+    border: 1px solid black;
+  }
+  .finalizar-button {
+    width: 200px; /* Ancho del botón */
+  }
+
+  .file-upload-card {
+    margin: 1rem 0; /* Espaciado vertical */
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    text-align: center; /* Centra el contenido dentro del card */
+  }
+  
+  .media-upload-container {
+    margin-top: 1rem;
+  }
