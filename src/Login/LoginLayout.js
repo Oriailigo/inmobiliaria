@@ -3,6 +3,8 @@ import { Box, Typography, Grid } from '@mui/material';
 import { LoginCard } from './components/LoginCard';
 
 function LoginContainer() {
+  const [showPassword, setShowPassword] = React.useState(false);
+
   const handleEmailChange = (event) => {
     console.log('Email:', event.target.value);
   };
@@ -19,10 +21,13 @@ function LoginContainer() {
     console.log('Olvidé mi contraseña');
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
   return (
     <Grid container spacing={2} sx={{ padding: 2 }}>
       <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
-        
         {/* Imagen de fondo solo para móviles */}
         <Box
           sx={{
@@ -35,7 +40,7 @@ function LoginContainer() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: -1, // Coloca la imagen detrás del card
-            display: { xs: 'block', sm: 'none' } // Solo en móvil
+            display: { xs: 'block', sm: 'none' }, // Solo en móvil
           }}
         />
 
@@ -55,7 +60,6 @@ function LoginContainer() {
             background: 'none', // Fondo transparente
             border: 'none', // Sin bordes
             boxShadow: 'none', // Sin sombras
-            
           }}
         >
           <LoginCard 
@@ -63,9 +67,10 @@ function LoginContainer() {
             handlePasswordChange={handlePasswordChange} 
             handleLogin={handleLogin} 
             handleForgotPassword={handleForgotPassword} 
+            showPassword={showPassword}
+            togglePasswordVisibility={togglePasswordVisibility}
           />
         </Box>
-
       </Grid>
 
       <Grid item xs={12} sm={6} sx={{ display: { xs: 'none', sm: 'block' } }}>

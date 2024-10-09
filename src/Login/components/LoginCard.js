@@ -7,6 +7,7 @@ import { Visibility, VisibilityOff, AccountCircle } from '@mui/icons-material';
 
 
 function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handleForgotPassword, showPassword, togglePasswordVisibility }) {
+
   return (
     <Card sx={{ maxWidth: 400, width: '100%', padding: 2, backgroundColor: 'rgba(255, 255, 255, 0.9)', borderRadius: 2 }}>
       <CardContent>
@@ -17,6 +18,7 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
 
         {/* Email Input */}
         <TextField
+          required
           fullWidth
           placeholder="Email"
           sx={{fontWeight:'bold',border:'1px solid black',borderRadius:'10px'}}
@@ -33,27 +35,28 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
         />
 
         {/* Password Input */}
-        <TextField
-          fullWidth
-          placeholder="Contraseña"
-          margin="normal"
-          variant="outlined"
-          sx={{fontWeight:'bold',border:'1px solid black', borderRadius:'10px'}}
-          type={showPassword ? 'text' : 'password'}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  edge="end"
-                  onClick={togglePasswordVisibility}
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-          onChange={handlePasswordChange}
-        />
+        {/* Campo de contraseña con visibilidad toggle */}
+      <TextField
+        required
+        fullWidth
+        placeholder="Contraseña"
+        margin="normal"
+        variant="outlined"
+        type={showPassword ? 'text' : 'password'}  
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton
+                edge="end"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <Visibility /> : <VisibilityOff />}
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+        onChange={handlePasswordChange}
+      />
 
         {/* Botón Continuar */}
         <Button

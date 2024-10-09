@@ -46,12 +46,12 @@ function CardVent() {
        
         <div className="form-container">
         <div className="input-container">
-            <Input label="Nombre y Apellido*" />
-            <Input label="Telefono*" />
-            <Input label="Email*" />
-            <Input label="Telefono*" />
-            <Input label="Localidad/Provincia*" />
-            <BasicSelect label="Tipo de propiedad*" />
+            <Input required label="Nombre y Apellido" />
+            <Input required label="Telefono" />
+            <Input required label="Email" />
+            <Input label="Telefono" />
+            <Input label="Localidad/Provincia" />
+            <BasicSelect label="Tipo de propiedad" />
         </div>
 
           <TextFieldc

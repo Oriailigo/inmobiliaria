@@ -3,6 +3,8 @@ import { Box, Typography, Grid } from '@mui/material';
 import { LoginCard } from './components/LoginCard';
 
 function RegisterLayout() {
+  const [showPassword, setShowPassword] = React.useState(false);
+
   const handleEmailChange = (event) => {
     console.log('Email:', event.target.value);
   };
@@ -17,6 +19,10 @@ function RegisterLayout() {
 
   const handleForgotPassword = () => {
     console.log('Olvidé mi contraseña');
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
   };
 
   return (
@@ -59,10 +65,12 @@ function RegisterLayout() {
           }}
         >
           <LoginCard 
-            handleEmailChange={handleEmailChange} 
-            handlePasswordChange={handlePasswordChange} 
-            handleLogin={handleLogin} 
-            handleForgotPassword={handleForgotPassword} 
+           handleEmailChange={handleEmailChange} 
+           handlePasswordChange={handlePasswordChange} 
+           handleLogin={handleLogin} 
+           handleForgotPassword={handleForgotPassword} 
+           showPassword={showPassword}
+           togglePasswordVisibility={togglePasswordVisibility}
           />
         </Box>
 

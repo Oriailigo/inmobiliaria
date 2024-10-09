@@ -30,8 +30,9 @@ function ContactForm() {
 
         {/* Nombre y Apellido */}
         <TextField
+          required
           fullWidth
-          label="Nombre y Apellido*"
+          label="Nombre y Apellido"
           placeholder="Ingrese su nombre completo"
           margin="normal"
           variant="outlined"
@@ -40,8 +41,9 @@ function ContactForm() {
 
         {/* Teléfono */}
         <TextField
+          required
           fullWidth
-          label="Teléfono*"
+          label="Teléfono"
           placeholder="Ingrese su número de teléfono"
           margin="normal"
           variant="outlined"
@@ -49,8 +51,9 @@ function ContactForm() {
 
         {/* Email */}
         <TextField
+          required
           fullWidth
-          label="Email*"
+          label="Email"
           placeholder="Ingrese su correo electrónico"
           margin="normal"
           variant="outlined"
@@ -67,7 +70,7 @@ function ContactForm() {
 
         {/* Categoría */}
         <FormControl fullWidth margin="normal">
-          <InputLabel id="category-label">Categoría*</InputLabel>
+          <InputLabel id="category-label">Categoría</InputLabel>
           <Select
             labelId="category-label"
             value={category}

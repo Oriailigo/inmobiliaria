@@ -22,7 +22,7 @@ import { getAllPropiedades, getPropiedadesFavoritas, updateOrCreatePropiedad } f
 import { authenticateUser } from './Servicio/authService';
 import UploadComponent from './UploadComponent ';
 import { RegisterLayout } from './Register/RegisterLayout';
-
+import { Navbar } from './Navbar/Navbar';
 function App() {
 
   useEffect(()=>{
@@ -54,9 +54,9 @@ function App() {
     <Router>
       {/* Menú de navegación */}
       <header className="header">
-        <div className="header-row centered">
-        <ButtonMenu/>
-        
+        <div>
+      {/*  <ButtonMenu/>  */}
+        < Navbar/>
         </div>
      
       </header>

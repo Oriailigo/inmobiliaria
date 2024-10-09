@@ -23,8 +23,9 @@ function DataForm() {
         
         {/* Input para Nombre */}
         <TextField
+          required
           fullWidth
-          label="Nombre*"
+          label="Nombre"
           placeholder="Ingrese su nombre"
           margin="normal"
           variant="outlined"
@@ -32,8 +33,9 @@ function DataForm() {
 
         {/* Input para Apellido */}
         <TextField
+          required
           fullWidth
-          label="Apellido*"
+          label="Apellido"
           placeholder="Ingrese su apellido"
           margin="normal"
           variant="outlined"
@@ -45,8 +47,9 @@ function DataForm() {
           Datos de contacto
         </Typography>
         <TextField
+          required
           fullWidth
-          label="Datos de contacto*"
+          label="Datos de contacto"
           placeholder="Ingrese su correo electrónico o número de teléfono"
           margin="normal"
           variant="outlined"
@@ -65,7 +68,7 @@ function DataForm() {
               labelId="country-code-label"
               value={category}
               onChange={handleCategoryChange}
-              label="Código de país*"
+              label="Código de país"
             >
               <MenuItem value="arg">Argentina (+54)</MenuItem>
               <MenuItem value="usa">Estados Unidos (+1)</MenuItem>
@@ -76,7 +79,7 @@ function DataForm() {
           {/* Input para Teléfono celular */}
           <TextField
             fullWidth
-            label="Teléfono celular*"
+            label="Teléfono celular"
             placeholder="Ingrese su teléfono"
             margin="normal"
             variant="outlined"
@@ -88,7 +91,7 @@ function DataForm() {
           {/* Input para Contraseña */}
           <TextField
             fullWidth
-            label="Contraseña*"
+            label="Contraseña"
             type="password"
             placeholder="Ingrese su contraseña"
             margin="normal"
@@ -98,7 +101,7 @@ function DataForm() {
           {/* Input para Nueva contraseña */}
           <TextField
             fullWidth
-            label="Nueva contraseña*"
+            label="Nueva contraseña"
             type="password"
             placeholder="Ingrese su nueva contraseña"
             margin="normal"

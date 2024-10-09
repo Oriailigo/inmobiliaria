@@ -15,6 +15,7 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
 
         {/* Nombre y Apellido Input */}
         <TextField
+          required
           fullWidth
           placeholder="Nombre y Apellido"
           sx={{ fontWeight: 'bold', border: '1px solid black', borderRadius: '10px' }}
@@ -25,6 +26,7 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
 
         {/* Email Input */}
         <TextField
+          required
           fullWidth
           placeholder="Email"
           sx={{ fontWeight: 'bold', border: '1px solid black', borderRadius: '10px' }}
@@ -42,23 +44,26 @@ function LoginCard({ handleEmailChange, handlePasswordChange, handleLogin, handl
 
         {/* Password Input */}
         <TextField
-          fullWidth
-          placeholder="Contraseña"
-          margin="normal"
-          variant="outlined"
-          sx={{ fontWeight: 'bold', border: '1px solid black', borderRadius: '10px' }}
-          type={showPassword ? 'text' : 'password'}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton edge="end" onClick={togglePasswordVisibility}>
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-          onChange={handlePasswordChange}
-        />
+        required
+        fullWidth
+        placeholder="Contraseña"
+        margin="normal"
+        variant="outlined"
+        type={showPassword ? 'text' : 'password'}  
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton
+                edge="end"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <Visibility /> : <VisibilityOff />}
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
+        onChange={handlePasswordChange}
+      />
 
         {/* Botón Continuar */}
         <Button

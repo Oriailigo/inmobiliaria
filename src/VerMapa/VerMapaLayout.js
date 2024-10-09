@@ -10,9 +10,7 @@ function PropertySearchPage() {
         {/* Primera columna - Mapa */}
         <Grid item xs={12} md={6}>
           <MapComponent 
-            mapUrl="https://via.placeholder.com/600x400?text=Mapa+de+Buenos+Aires"
-            // O si estás usando coordenadas
-            // coordinates={{ lat: -34.603684, lng: -58.381559 }}
+           
           />
         </Grid>
 
