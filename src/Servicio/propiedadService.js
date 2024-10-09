@@ -16,9 +16,8 @@ export const getPropiedadesFavoritas = async (email) => {
  */
 
 export const updateFavorito = async (favoritoDTO) => {
-    return await postData("/public/favorito", favoritoDTO);
+    return await postData("/public/propiedad/favorito", favoritoDTO);
 };
-
 
 
 /**
@@ -26,13 +25,8 @@ export const updateFavorito = async (favoritoDTO) => {
  * @param {*} pageable 
  * @returns 
  */
-export const getAllPropiedades = async ({ page = 0, size = 10, soloActivas = true } = {}) => {
-    const pageable = {
-        page,
-        size,
-        soloActivas
-    };
-    return await fetchData("/public/propiedad/all", pageable);
+export const getAllPropiedades = async (filtroDTO) => {
+    return await fetchData("/public/propiedad/all", filtroDTO);
 };
 
 /**
