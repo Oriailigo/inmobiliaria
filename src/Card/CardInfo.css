@@ -6,6 +6,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
+.content-mg{
+  margin-left: 2rem;
+}
 
 /* Título debajo de la imagen */
 .info-title {
@@ -16,8 +19,9 @@
 /* Contenedor de las dos columnas debajo del título */
 .info-columns {
   display: flex;
+  gap:2rem;
   flex-wrap: wrap;
-  width: 70%;
+  width: 80%;
 }
 
 .info-column {
@@ -37,11 +41,23 @@
   color: #333;
   font-size: 24px;
 }
+.separacion{
+  gap:2rem;
+}
 
 /* Responsividad */
 @media (max-width: 768px) {
   .info-columns {
     flex-direction: column;
+  }
+  .content-mg{
+    margin-left: 0rem;
+  }
+  .info-columns {
+    display: flex;
+    gap:0rem;
+    flex-wrap: wrap;
+    width: 80%;
   }
 }
 

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-import {CardCont} from '../Card/CardCont';
+import {ContactForm} from './Componentes/Contacto/Form';
 import {CardIn} from '../Card/CardInfo';
 import {CardMa} from '../Card/CardMas';
+import {CardMapa} from '../Card/CardMapa';
 import {Breadcrumb} from '../BreadcrumbNavegacion/Breadcrumb';
 import PhotoIcon from '@mui/icons-material/Photo'; // Asegúrate de tener los íconos instalados
 import VideoIcon from '@mui/icons-material/VideoLibrary';
 import Rotate90DegreesCcwIcon from '@mui/icons-material/Rotate90DegreesCcw'; // Icono para Fotos 360
 import ViewInArIcon from '@mui/icons-material/ViewInAr'; // Icono para Tour Virtual
+import { ActionAreaCard } from '../Inicio/ActionAreaCard'; // Si tienes este layout
 
 import './AlquilerLayout.css';  // Importa los estilos
 
@@ -88,14 +90,8 @@ function AlquilerLayout() {
         </div>
         
       </div>
-      <div className="button-group">
-          {/* Botones alineados a la izquierda */}
-          <div className="button-group-left">
-            <div className="tags">
-              <span className="tag">Tag 1</span>
-              <span className="tag">Tag 2</span>
-            </div>
-          </div>
+      <div className="button-group-alquiler">
+       
           {/* Botones alineados a la derecha */}
           <div className="button-group-right">
           <Button
@@ -134,16 +130,37 @@ function AlquilerLayout() {
         <div className="main-column">
          
           <CardIn/>
-          <CardMa  text="Este es un texto extremadamente largo que se recortará inicialmente. Si el usuario desea leer más, puede hacer clic en el acordeón para expandir el contenido completo..." />
+          <CardMa  text="Alquiler Casa 3 ambientes Quilmes - Alquiler de Casa 3 ambientes, en el barrio Casas del Bosque, la propiedad se desarrolla en 2 plantas. Planta baja" />
+          <CardMapa/>
         </div>
 
         {/* Columna secundaria (slide) */}
         <div className="side-column">
        
-          <CardCont/>
+          <ContactForm/>
           
         </div>
       </div>
+      <div className="main-container main-alquiler">
+        <div className="title-row">
+          <h2>Busquedas relacionadas</h2>
+        </div>
+        
+      </div>
+      
+      <div className="main-container">
+       <div className="button-group">
+         
+         {/* Botones alineados a la derecha */}
+         <div className="button-group-right">
+         <ActionAreaCard image="/img/inicio4.svg" titulo="Casa en Del Carril" precio="75,000 dolares"/>
+         <ActionAreaCard image="/img/inicio5.svg" titulo="Gonzalez y San Millan" precio="150,000 dolares" />
+         <ActionAreaCard image="/img/inicio6.jpg" titulo="Casa a restaurar + garaje" precio="80,000 dolares" />
+         </div>
+         
+       </div>
+       
+     </div>
     </div>
   );
 }

@@ -45,11 +45,12 @@
   }
   
   /* Botones alineados */
-  .button-group {
+  .button-group-alquiler {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 2rem;
+    margin-right:3.4rem;
   }
   
   .button-group-left,
@@ -90,8 +91,9 @@
     padding: 1rem;
   }
 
-  .button-group {
+  .button-group-alquiler {
     flex-direction: column;
+    margin-right:0rem ;
   }
 
   .button-group-left,

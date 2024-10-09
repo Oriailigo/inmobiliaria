@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import './CardInfo.css';
 import {AccordionExpandIcon} from '../Card/AcordeonInfo';
+import {CardIcon} from '../Card/CardIcon';
 
 function CardMa({ text }) {
   return (
@@ -19,7 +20,7 @@ function CardMa({ text }) {
         <hr className="separator" />
           {/* Contenedor de 2 columnas debajo del título */}
           <div className="info-columns">
-          <AccordionExpandIcon text={text}/>
+          <CardIcon/>
         </div>
       </CardContent>
     </Card>
