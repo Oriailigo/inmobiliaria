@@ -6,6 +6,11 @@ import {Tabla} from './components/Tabla'; // Importamos el componente Tabla
 import './Admin.css'; // Importamos los estilos personalizados
 import { TablaUsuarios } from './components/TablaUsuarios';
 import { CargarPropiedad } from './components/CargarPropiedad';
+import { GraficoVisitas } from './components/GraficoVisitas';
+import { TraficoUsuarios } from './components/TraficoUser';
+import { PropiedadesVisitadas } from './components/PropiedadesVisitadas';
+import { RecientesUsuarios } from './components/RecientesUsuarios';
+import { VisitasLayout } from './components/VisitasLayout';
 
 const DashboardLayout = () => {
      // Estado para manejar qué contenido mostrar
@@ -56,6 +61,27 @@ const DashboardLayout = () => {
                {/* Tabla para Propiedades  
                <TablaUsuarios />  */}
                <CargarPropiedad/>
+             </>
+            )}
+            {selectedMenu === 'Ajustes' && (
+               <>
+               <div className="cont-text">
+                   <Typography variant="h5" className="dashboard-title">
+                   Hola Franco
+                   </Typography>
+                   <Typography variant="body1" className="dashboard-subtitle">
+                   esto es lo que está pasando con tu inmobiliaria hoy
+                   </Typography>
+               </div>
+               {/* Tabla para Propiedades  
+               <TablaUsuarios />
+                              <GraficoVisitas/>
+                                             <TraficoUsuarios/>
+                                                            <PropiedadesVisitadas/>
+               */}
+
+
+               <VisitasLayout/>
              </>
             )}
 

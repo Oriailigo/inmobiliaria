@@ -58,7 +58,9 @@ const SideMenu = ({ onMenuItemClick }) => {
 
       {/* Botones inferiores: Ajustes y Cerrar sesión */}
       <Box className="bottom-buttons">
-        <Button className="menu-button" startIcon={<SettingsIcon />}>
+        <Button className="menu-button" startIcon={<SettingsIcon />}
+        onClick={() => onMenuItemClick('Ajustes')}
+        >
           Ajustes
         </Button>
         <Button className="menu-button" startIcon={<LogoutIcon />}>
