@@ -22,10 +22,11 @@ import { getAllPropiedades, getPropiedadesFavoritas, updateOrCreatePropiedad } f
 import { authenticateUser } from './Servicio/authService';
 import UploadComponent from './UploadComponent ';
 import { RegisterLayout } from './Register/RegisterLayout';
-//import { Navbar } from './Navbar/Navbar';
-//import { Navbar } from './Navbar/NavbarLogin';
-import { Navbar } from './Navbar/NavbarAdmin';
 import { DashboardLayout } from './Administrador/Admin';
+//import { Navbar } from './Navbar/Navbar';
+import { Navbar } from './Navbar/NavbarLogin';
+//import { Navbar } from './Navbar/NavbarAdmin';
+
 
 function App() {
 
