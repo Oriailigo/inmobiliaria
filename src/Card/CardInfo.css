@@ -1,7 +1,7 @@
 /* Estilos para la tarjeta de contacto */
 .contact-card {
   margin: 2rem auto;
-  max-width: 600px;
+  max-width: 100%!important;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -19,9 +19,8 @@
 /* Contenedor de las dos columnas debajo del título */
 .info-columns {
   display: flex;
-  gap:2rem;
   flex-wrap: wrap;
-  width: 80%;
+  width: 40%;
 }
 
 .info-column {

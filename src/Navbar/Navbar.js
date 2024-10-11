@@ -20,7 +20,7 @@ const Navbar = () => {
     }
   };
   return (
-    <header className="header">
+    <header className="header-flex">
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
         <img src="/img/logoInicio.svg" width="50px" alt="Logo" />
