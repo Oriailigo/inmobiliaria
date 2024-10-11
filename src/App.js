@@ -22,7 +22,9 @@ import { getAllPropiedades, getPropiedadesFavoritas, updateOrCreatePropiedad } f
 import { authenticateUser } from './Servicio/authService';
 import UploadComponent from './UploadComponent ';
 import { RegisterLayout } from './Register/RegisterLayout';
-import { Navbar } from './Navbar/Navbar';
+//import { Navbar } from './Navbar/Navbar';
+//import { Navbar } from './Navbar/NavbarLogin';
+import { Navbar } from './Navbar/NavbarAdmin';
 import { DashboardLayout } from './Administrador/Admin';
 
 function App() {
@@ -57,9 +59,14 @@ function App() {
   {/*    <DashboardLayout/>
        Menú de navegación 
       <header className="header"> */}
-        <div>
+        <div sx={{
+            display: 'flex',
+           
+            justifyContent: 'center',
+            
+          }}>
       {/*  <ButtonMenu/>  */}
-      <DashboardLayout/>
+    
         < Navbar/>
         </div>
      
