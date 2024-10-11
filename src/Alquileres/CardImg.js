@@ -4,6 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MailIcon from '@mui/icons-material/Mail';
+import { useNavigate } from "react-router-dom";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import BedIcon from '@mui/icons-material/Bed';
@@ -17,17 +18,25 @@ function CardImg({ image }) {
     setIsFavorited(!isFavorited);
   };
 
+  const navigate = useNavigate(); // Hook para la redirección
+
+  const handleClick = () => {
+    navigate("/Alquiler"); // Redirige a la página de Alquiler
+  };
+
   return (
-    <Link to="/Alquiler" style={{ textDecoration: 'none', color: 'inherit' }}> {/* Envolviendo el Card con Link */}
+    
     <Card sx={{ display: 'flex', gap: { xs: '0rem', sm: '2rem' }, flexDirection: { xs: 'column', sm: 'row' }, width: '100%', marginBottom: '20px' }}>
       {/* Imagen que ocupa la mitad izquierda */}
-      <CardMedia
-        component="img"
-        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '450px' } }}  // Ajustes responsivos
-        image={ image }
-        alt="Imagen"
-      />
-
+        <CardMedia
+          component="img"
+          sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '450px' },cursor: 'pointer', }}  // Ajustes responsivos
+          image={ image }
+          alt="Imagen"
+          onClick={handleClick}
+         
+        />
+     
       {/* Contenido del lado derecho */}
       <CardContent sx={{ width: { xs: '100%', sm: '50%' }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <Grid container spacing={2}>
@@ -58,7 +67,12 @@ function CardImg({ image }) {
               onClick={handleFavoriteClick}
               className={`favorite-icon ${isFavorited ? 'favorited' : ''}`}
             >
-              <FavoriteIcon    sx={{ marginRight: { xs: '2rem', sm: '0rem' }}}    />
+              <FavoriteIcon
+                sx={{
+                  marginRight: { xs: '2rem', sm: '0rem' },
+                  color: isFavorited ? 'red' : 'inherit', // Cambia el color a rojo si está favorito
+                }}
+              />
             </IconButton>
           </Grid>
 
@@ -118,7 +132,7 @@ function CardImg({ image }) {
         </Grid>
       </CardContent>
     </Card>
-    </Link>
+  
   );
 }
 
