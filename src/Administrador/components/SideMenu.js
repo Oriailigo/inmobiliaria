@@ -4,6 +4,7 @@ import AddIcon from '@mui/icons-material/Add'; // Icono para el botón Agregar
 import HomeIcon from '@mui/icons-material/Home'; // Icono para los botones de Home
 import PerformanceIcon from '@mui/icons-material/BarChart';
 import PropiedadIcon from '@mui/icons-material/TouchApp';
+import GroupIcon from '@mui/icons-material/Group';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import SettingsIcon from '@mui/icons-material/Settings'; // Icono para ajustes
 import LogoutIcon from '@mui/icons-material/Logout'; // Icono para cerrar sesión
@@ -17,8 +18,9 @@ const SideMenu = ({ onMenuItemClick }) => {
         variant="contained"
         className="add-button"
         startIcon={<AddIcon />}
+        onClick={() => onMenuItemClick('AgregarPropiedad')}
       >
-        Agregar
+        Agregar propiedad
       </Button>
 
       {/* Botón Dashboard */}
@@ -45,6 +47,12 @@ const SideMenu = ({ onMenuItemClick }) => {
         </Button>
         <span className="new-tag">New</span>
       </Box>
+      {/* Botón user */}
+      <Button className="menu-button" startIcon={<GroupIcon />}
+      onClick={() => onMenuItemClick('UsuariosConectados')}
+      >
+        Usuarios conectados
+      </Button>
 
       {/* Título Support */}
       <Typography className="menu-title">Support</Typography>

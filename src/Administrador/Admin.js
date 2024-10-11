@@ -12,6 +12,7 @@ import { PropiedadesVisitadas } from './components/PropiedadesVisitadas';
 import { RecientesUsuarios } from './components/RecientesUsuarios';
 import { VisitasLayout } from './components/VisitasLayout';
 
+
 const DashboardLayout = () => {
      // Estado para manejar qué contenido mostrar
   const [selectedMenu, setSelectedMenu] = useState('Dashboard');
@@ -20,9 +21,9 @@ const DashboardLayout = () => {
   const handleMenuItemClick = (menu) => {
     setSelectedMenu(menu);
   };
-  return (
+ 
+ return (
 
-    
     <Box >
         <Header />
         <div className="dashboard-layout">
@@ -48,7 +49,7 @@ const DashboardLayout = () => {
               </>
             )}
 
-            {selectedMenu === 'Reports' && (
+            {selectedMenu === 'AgregarPropiedad' && (
                <>
                <div className="cont-text">
                    <Typography variant="h5" className="dashboard-title">
@@ -63,7 +64,7 @@ const DashboardLayout = () => {
                <CargarPropiedad/>
              </>
             )}
-            {selectedMenu === 'Ajustes' && (
+              {selectedMenu === 'Reports' && (
                <>
                <div className="cont-text">
                    <Typography variant="h5" className="dashboard-title">
@@ -74,18 +75,25 @@ const DashboardLayout = () => {
                    </Typography>
                </div>
                {/* Tabla para Propiedades  
-               <TablaUsuarios />
-                              <GraficoVisitas/>
-                                             <TraficoUsuarios/>
-                                                            <PropiedadesVisitadas/>
-               */}
-
-
+               <TablaUsuarios />  */}
                <VisitasLayout/>
              </>
             )}
-
-
+                 {selectedMenu === 'UsuariosConectados' && (
+               <>
+               <div className="cont-text">
+                   <Typography variant="h5" className="dashboard-title">
+                   Hola Franco
+                   </Typography>
+                   <Typography variant="body1" className="dashboard-subtitle">
+                   esto es lo que está pasando con tu inmobiliaria hoy
+                   </Typography>
+               </div>
+              
+               <TablaUsuarios />
+             </>
+            )}
+        
         </Box>
         </div>
     </Box>

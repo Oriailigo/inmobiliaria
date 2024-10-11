@@ -54,15 +54,16 @@ function App() {
 
   return (
     <Router>
-      <DashboardLayout/>
-      {/* Menú de navegación */}
-      <header className="header">
+  {/*    <DashboardLayout/>
+       Menú de navegación 
+      <header className="header"> */}
         <div>
       {/*  <ButtonMenu/>  */}
+      <DashboardLayout/>
         < Navbar/>
         </div>
      
-      </header>
+    {/*   </header>
       <UploadComponent></UploadComponent>
       
       {/* Configuración de rutas */}

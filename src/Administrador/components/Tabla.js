@@ -1,9 +1,10 @@
-import React from 'react';
-import { Box, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Link, Button } from '@mui/material';
+import React , { useState } from 'react';
+import { Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Link, Button } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import './Tabla.css'; // Importamos los estilos personalizados
+import { ModalEliminar } from './ModalEliminar';
 
 // Función para crear datos de ejemplo
 const createData = (photo, description, price, date) => {
@@ -18,6 +19,13 @@ const rows = [
 ];
 
 const Tabla = () => {
+   // Función del modal
+   const [isModalOpen, setIsModalOpen] = useState(false);
+
+   const handleOpenModal = () => setIsModalOpen(true);
+   const handleCloseModal = () => setIsModalOpen(false);
+   
+ 
   return (
     <TableContainer component={Paper} className="table-container">
       <Table>
@@ -55,9 +63,10 @@ const Tabla = () => {
                 <IconButton aria-label="edit" color="primary">
                   <EditIcon />
                 </IconButton>
-                <IconButton aria-label="delete" color="error">
+                <IconButton aria-label="delete" color="error" onClick={handleOpenModal}>
                   <DeleteIcon />
                 </IconButton>
+                <ModalEliminar open={isModalOpen} onClose={handleCloseModal} />
               </TableCell>
             </TableRow>
           ))}

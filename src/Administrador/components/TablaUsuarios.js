@@ -18,7 +18,7 @@ const rows = [
 const TablaUsuarios = () => {
   return (
     <TableContainer component={Paper} className="table-container">
-      <Table>
+      <Table className='table-with'>
         <TableHead>
           <TableRow>
             <TableCell>
@@ -28,16 +28,16 @@ const TablaUsuarios = () => {
             </TableCell>
             <TableCell></TableCell>
             <TableCell></TableCell>
-            <TableCell align="right">Acciones</TableCell>
+            <TableCell align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row, index) => (
-            <TableRow key={index}>
+            <TableRow key={index} className="conten-flex">
               <TableCell>
                 <img src={row.photo} alt="Perfil" className="profile-image" />
               </TableCell>
-              <TableCell>{row.username}</TableCell>
+              <TableCell align="left">{row.username}</TableCell>
               <TableCell>{row.email}</TableCell>
               <TableCell align="right">
                 {/* Puedes agregar botones de acciones aquí si es necesario */}

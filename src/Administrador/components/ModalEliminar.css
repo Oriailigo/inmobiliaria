@@ -1,0 +1,75 @@
+/* Estilos para el card externo */
+.outer-card {
+    padding: 5rem; /* Padding de 2rem para el card externo */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #f5f5f5; /* Color de fondo opcional */
+    display: flex;
+    flex-direction: column; /* Los elementos dentro del card se organizan en columna */
+    gap: 1rem; /* Espacio entre los elementos dentro del card */
+    width: 500px;
+  }
+  
+  /* Estilos para el card interno */
+  .inner-card {
+    padding: 1rem; /* Padding de 1rem para el card interno */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center; /* Distribuye el contenido en horizontal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera opcional */
+  }
+  
+  /* Contenedor en fila para la imagen y el texto */
+  .content-row {
+    display: flex;
+ 
+    justify-content: center;
+    align-items: center; /* Alinea el contenido verticalmente al centro */
+    gap: 1rem; /* Espacio entre la imagen y el texto */
+  }
+  
+  /* Contenedor de la imagen */
+  .image-container-modal {
+    width: 200px; /* Ancho del contenedor de imagen */
+    height: 100px; /* Alto del contenedor de imagen */
+    border-radius: 5%; /* Bordes redondeados */
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+  }
+  
+  /* Imagen redondeada que se ajusta al contenedor */
+  .rounded-image {
+    width: 100%; /* La imagen se ajusta al ancho del contenedor */
+    height: 100%; /* La imagen se ajusta al alto del contenedor */
+    object-fit: cover; /* La imagen mantiene su aspecto */
+  }
+  
+  /* Párrafo para el texto de eliminar */
+  .delete-text {
+    text-align: center; /* Alineación centrada */
+    font-weight: bold; /* Negrita para mayor visibilidad */
+  }
+  
+  /* Fila de botones */
+  .button-row {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 1rem; /* Espacio entre los botones */
+  }
+  
+  /* Estilos para el botón de cancelar */
+  .cancel-button {
+    background-color: grey!important; /* Color gris */
+    color: white; /* Texto blanco */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Estilos para el botón de eliminar */
+  .delete-button {
+    background-color: red!important; /* Color rojo */
+    color: white; /* Texto blanco */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  

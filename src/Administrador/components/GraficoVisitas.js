@@ -34,11 +34,11 @@ const GraficoVisitas = () => {
   };
 
   return (
-    <Card variant="outlined">
-      <CardContent>
-        <Box display="flex" justifyContent="space-between" alignItems="center">
+    <Card variant="outlined" >
+      <CardContent >
+        <Box  display="flex" justifyContent="space-between" alignItems="center">
           <Typography variant="h6">Visitas</Typography>
-          <Box>
+          <Box >
             {['12 meses', '6 meses', '30 días', '7 días'].map((label) => (
               <Button
                 key={label}

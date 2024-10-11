@@ -25,4 +25,12 @@
       font-size: 0.9rem;
     }
   }
-  
+  .table-with{
+    width: 50%!important;
+  }
+  .conten-flex{
+    display: flex!important;
+    align-items: center;
+    justify-content: left;
+    gap:4rem;
+  }
