@@ -1,5 +1,10 @@
 /* Estilos para WebPage.css */
-
+.left-favourite{
+display: flex;
+justify-content: flex-end;
+padding-right: 3rem;
+flex-direction: row;
+}
 /* Estilos generales */
 .web-page {
     font-family: Arial, sans-serif;

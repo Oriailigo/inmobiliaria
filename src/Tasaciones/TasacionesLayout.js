@@ -1,33 +1,50 @@
-import React from 'react';
-import { Divider, MenuItem,  Select } from '@mui/material';
+import React, { useState } from 'react';
+import { Divider, MenuItem,  Select, Button  } from '@mui/material';
+import FilterListIcon from '@mui/icons-material/FilterList';
 import {Filtros} from './Filtros'; // Importar el componente Filtros
+import {FiltroPopUp} from './Modal'; // Importar el componente Filtros
 import {CardImg} from './CardImg'; // Importar el componente Filtros
 import './TasacionesLayout.css'; // Importar los estilos
 
 function TasacionesLayout() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const openPopup = () => setIsPopupOpen(true);
+  const closePopup = () => setIsPopupOpen(false);
   return (
     <div className="alquileres-layout">
       {/* Línea separadora superior */}
       <Divider />
 
       {/* Componente de Filtros */}
-      <Filtros />
-
+      <div className='filter-container'>
+          <Filtros />
+          {/* Botón que abre el modal */}
+          <Button variant="contained" 
+              startIcon={<FilterListIcon />}onClick={openPopup}>
+              Filtros
+          </Button>
+      </div>
+      <div>
+          {/* Ventana emergente */}
+          <FiltroPopUp open={isPopupOpen} handleClose={closePopup} />
+      </div>
       {/* Línea separadora inferior */}
       <Divider />
 
       {/* Contenedor de párrafo y select alineados con flexbox */}
       <div className="paragraph-select-container">
-        <p>Texto del párrafo en el extremo izquierdo</p>
-        <Select className="select-element" defaultValue="" variant="outlined" size="small">
-          <MenuItem value="opcion1">Opción 1</MenuItem>
-          <MenuItem value="opcion2">Opción 2</MenuItem>
-          <MenuItem value="opcion3">Opción 3</MenuItem>
+        <p><b>3800</b> propiedades en Venta</p>
+        <Select className="select-element" defaultValue="Ordenar por" variant="outlined" size="small">
+          <MenuItem value="Ordenar por">Ordenar por</MenuItem>
+          <MenuItem value="opcion1">Menor Precio</MenuItem>
+          <MenuItem value="opcion2">Mayor Precio</MenuItem>
+          
         </Select>
       </div>
-      <CardImg />
-      <CardImg />
-      <CardImg />
+      <CardImg image='/img/tasaciones1.svg' />
+      <CardImg  image= '/img/tasaciones2.svg'  />
+      <CardImg  image= '/img/tasaciones3.svg' />
     </div>
   );
 }

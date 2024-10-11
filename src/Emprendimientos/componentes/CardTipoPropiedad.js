@@ -5,7 +5,7 @@ function CardTipoPropiedad() {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <CardContent>
-        <Typography variant="h6">Tipo de Propiedad</Typography>
+        <Typography variant="h6"><b>Tipo de Propiedad</b></Typography>
         <FormControl fullWidth sx={{ marginTop: 1 }}>
           <InputLabel>Tipo de Propiedad</InputLabel>
           <Select defaultValue="Tipo de propiedad">

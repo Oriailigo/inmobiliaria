@@ -5,7 +5,7 @@ function CardUbicacion() {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <CardContent>
-        <Typography variant="h6">Ubicación</Typography>
+        <Typography variant="h6"><b>Ubicación</b></Typography>
         <TextField
           fullWidth
           placeholder="¿Dónde querés mudarte?"

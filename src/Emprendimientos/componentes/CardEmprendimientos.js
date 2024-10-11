@@ -13,7 +13,7 @@ function CardEmprendimientos() {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <CardContent>
-        <Typography variant="h6">Emprendimientos</Typography>
+        <Typography variant="h6"><b>Emprendimientos</b></Typography>
         <Typography variant="body1" sx={{ marginBottom: 1 }}>Etapa</Typography>
         <Box
           sx={{

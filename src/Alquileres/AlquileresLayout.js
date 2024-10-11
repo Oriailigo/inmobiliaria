@@ -20,9 +20,9 @@ function AlquileresLayout() {
       <div className="paragraph-select-container">
         <p><b>38000</b> propiedades en alquiler</p>
         <Select className="select-element" defaultValue="Ordenar por" variant="outlined" size="small">
-          <MenuItem value="opcion1">Opción 1</MenuItem>
-          <MenuItem value="opcion2">Opción 2</MenuItem>
-          <MenuItem value="opcion3">Opción 3</MenuItem>
+          <MenuItem value="Ordenar por">Ordenar por</MenuItem>
+          <MenuItem value="opcion1">Menor Precio</MenuItem>
+          <MenuItem value="opcion2">Mayor Precio</MenuItem>
         </Select>
       </div>
       <CardImg image="/img/alquiler1.svg" />

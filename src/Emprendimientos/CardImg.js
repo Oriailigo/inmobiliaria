@@ -7,6 +7,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import BathtubIcon from '@mui/icons-material/Bathtub';
 import BuildIcon from '@mui/icons-material/Apartment';
+import { useNavigate } from "react-router-dom";
 import './CardImg.css'; // Importar el archivo CSS
 import { Link } from 'react-router-dom'; // Importar Link para la navegación
 import Chip from '@mui/material/Chip';
@@ -19,15 +20,22 @@ function CardImg({ image }) {
     setIsFavorited(!isFavorited);
   };
 
+  const navigate = useNavigate(); // Hook para la redirección
+
+  const handleClick = () => {
+    navigate("/Alquiler"); // Redirige a la página de Alquiler
+  };
+
   return (
-    <Link to="/Alquiler" style={{ textDecoration: 'none', color: 'inherit' }}> {/* Envolviendo el Card con Link */}
+    
     <Card sx={{ display: 'flex', gap: { xs: '0rem', sm: '2rem' }, flexDirection: { xs: 'column', sm: 'row' }, width: '100%', marginBottom: '20px' }}>
       {/* Imagen que ocupa la mitad izquierda */}
       <CardMedia
         component="img"
-        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '550px' } }}  // Ajustes responsivos
+        sx={{ width: { xs: '100%', sm: '50%' }, height: { xs: '200px', sm: '550px' },cursor: 'pointer',  }}  // Ajustes responsivos
         image={ image }
         alt="Imagen"
+        onClick={handleClick}
       />
 
       {/* Contenido del lado derecho */}
@@ -73,6 +81,17 @@ function CardImg({ image }) {
             </Box>
 
             {/* Ícono de corazón */}
+            <IconButton
+              onClick={handleFavoriteClick}
+              className={`favorite-icon ${isFavorited ? 'favorited' : ''}`}
+            >
+              <FavoriteIcon
+                sx={{
+                  marginRight: { xs: '2rem', sm: '0rem' },
+                  color: isFavorited ? 'red' : 'inherit', // Cambia el color a rojo si está favorito
+                }}
+              />
+            </IconButton>
            
           </Grid>
 
@@ -113,7 +132,7 @@ function CardImg({ image }) {
         </Grid>
       </CardContent>
     </Card>
-    </Link>
+    
   );
 }
 

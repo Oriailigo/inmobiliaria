@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
+import { IconButton } from '@mui/material';
 import {ContactForm} from './Componentes/Contacto/Form';
 import {CardIn} from '../Card/CardInfo';
 import {CardMa} from '../Card/CardMas';
@@ -7,6 +8,7 @@ import {CardMapa} from '../Card/CardMapa';
 import {Breadcrumb} from '../BreadcrumbNavegacion/Breadcrumb';
 import PhotoIcon from '@mui/icons-material/Photo'; // Asegúrate de tener los íconos instalados
 import VideoIcon from '@mui/icons-material/VideoLibrary';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import Rotate90DegreesCcwIcon from '@mui/icons-material/Rotate90DegreesCcw'; // Icono para Fotos 360
 import ViewInArIcon from '@mui/icons-material/ViewInAr'; // Icono para Tour Virtual
 import { ActionAreaCard } from '../Inicio/ActionAreaCard'; // Si tienes este layout
@@ -14,6 +16,13 @@ import { ActionAreaCard } from '../Inicio/ActionAreaCard'; // Si tienes este lay
 import './AlquilerLayout.css';  // Importa los estilos
 
 function AlquilerLayout() {
+    //estados de corazon
+  const [isFavorited, setIsFavorited] = useState(false);
+
+  const handleFavoriteClick = () => {
+    setIsFavorited(!isFavorited);
+  };
+  //estados de footo o video
   const [selectedTab, setSelectedTab] = useState('fotos'); // Estado para controlar la pestaña seleccionada
 
   const renderContent = () => {
@@ -90,6 +99,20 @@ function AlquilerLayout() {
         </div>
         
       </div>
+       {/* Ícono de corazón */}
+       <div className='left-favourite'>
+            <IconButton
+              onClick={handleFavoriteClick}
+              className= {`favorite-icon ${isFavorited ? 'favorited' : ''}`}
+            >
+              <FavoriteIcon
+                sx={{
+                  marginRight: { xs: '2rem', sm: '0rem' },
+                  color: isFavorited ? 'red' : 'inherit', // Cambia el color a rojo si está favorito
+                }}
+              />
+            </IconButton>
+        </div>
       <div className="button-group-alquiler">
        
           {/* Botones alineados a la derecha */}

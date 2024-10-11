@@ -13,7 +13,7 @@ function CardAmbientes() {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <CardContent>
-        <Typography variant="h6">Ambientes</Typography>
+        <Typography variant="h6"><b>Ambientes</b></Typography>
         <Box sx={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
           {[1, 2, 3, 4, 5, '+6'].map((ambiente) => (
             <Button

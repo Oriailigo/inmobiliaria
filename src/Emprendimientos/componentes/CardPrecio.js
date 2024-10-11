@@ -5,7 +5,7 @@ function CardPrecio() {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <CardContent>
-        <Typography variant="h6">Precio</Typography>
+        <Typography variant="h6"><b>Precio</b></Typography>
         <Box 
           sx={{
             display: 'flex', 
